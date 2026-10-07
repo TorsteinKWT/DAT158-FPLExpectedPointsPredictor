@@ -32,3 +32,7 @@ streamlit run app.py
 - `notebooks/` – utforsking
 
 Data hentes fra [vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League).
+
+## Bidragsytere
+
+- Torstein er tullete 🤡
