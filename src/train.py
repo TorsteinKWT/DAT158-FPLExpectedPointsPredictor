@@ -7,15 +7,15 @@ import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error
 
-from src.data import FEATURES, SEASONS, TARGET, build_training_frame, load_season
+from src.data import FEATURES, SEASONS, TARGET, load_frames
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "model.joblib"
 TEST_FRACTION = 0.2
 
 
 def main() -> None:
-    raw = pd.concat([load_season(season) for season in SEASONS], ignore_index=True)
-    data = build_training_frame(raw).sort_values("kickoff_time")
+    data = pd.concat([load_frames(season)[0] for season in SEASONS], ignore_index=True)
+    data = data.sort_values("kickoff_time")
 
     # Split basert på tidspunkt, slik at vi ikke får "lekkasje" fra fremtidige kamper inn i treningsdataene.
     split = int(len(data) * (1 - TEST_FRACTION))

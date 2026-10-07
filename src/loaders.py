@@ -5,8 +5,8 @@ from pathlib import Path
 import joblib
 import streamlit as st
 
-from src.data import SEASONS, build_prediction_frame, build_training_frame, load_season
-from src.fpl import fetch_entry, fetch_next_fixtures
+from src.data import SEASONS, load_frames
+from src.fpl import fetch_entry
 
 MODEL_PATH = Path(__file__).resolve().parent.parent / "model.joblib"
 
@@ -18,14 +18,8 @@ def load_model():
 
 @st.cache_data(ttl="1h", max_entries=len(SEASONS))
 def load_players(season: str):
-    """Returner rader per kamp for spilte runder, og én rad per spiller for neste kamp."""
-    raw = load_season(season, use_cache=False)
-    return build_training_frame(raw), build_prediction_frame(raw), int(raw["GW"].max())
-
-
-@st.cache_data(ttl="1h")
-def load_next_fixtures():
-    return fetch_next_fixtures()
+    """Returner rader per kamp for spilte runder, og rader per kamp for neste runde."""
+    return load_frames(season, use_cache=False)
 
 
 @st.cache_data(ttl="5m", max_entries=100)

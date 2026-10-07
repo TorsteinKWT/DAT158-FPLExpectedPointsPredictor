@@ -17,25 +17,6 @@ def get(path: str):
     return response.json()
 
 
-def fetch_next_fixtures() -> tuple[int, pd.DataFrame]:
-    """Returner neste runde og én rad per lag per kamp i den.
-
-    Et lag med dobbeltrunde får to rader, og et lag med blank runde får ingen.
-    """
-    bootstrap = get("bootstrap-static")
-    teams = {team["id"]: team["name"] for team in bootstrap["teams"]}
-    gameweek = next(event["id"] for event in bootstrap["events"] if event["is_next"])
-
-    rows = []
-    for fixture in get("fixtures"):
-        if fixture["event"] != gameweek:
-            continue
-        home, away = teams[fixture["team_h"]], teams[fixture["team_a"]]
-        rows.append({"team": home, "opponent": away, "was_home": 1})
-        rows.append({"team": away, "opponent": home, "was_home": 0})
-    return gameweek, pd.DataFrame(rows)
-
-
 def fetch_entry(entry_id: int) -> tuple[str, int, pd.DataFrame]:
     """Returner lagnavnet til en manager, og troppen slik den var satt opp i siste runde.
 
