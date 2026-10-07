@@ -11,9 +11,14 @@ from src.fpl import fetch_entry
 MODEL_PATH = Path(__file__).resolve().parent.parent / "model.joblib"
 
 
-@st.cache_resource
-def load_model():
+@st.cache_resource(max_entries=1)
+def _load_model(modified: float):
     return joblib.load(MODEL_PATH)
+
+
+def load_model():
+    # Endringstidspunktet er med i cache-nøkkelen, slik at en ny trening lastes inn uten restart.
+    return _load_model(MODEL_PATH.stat().st_mtime)
 
 
 @st.cache_data(ttl="1h", max_entries=len(SEASONS))
