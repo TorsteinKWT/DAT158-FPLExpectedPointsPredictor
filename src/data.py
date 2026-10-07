@@ -3,13 +3,13 @@
 from pathlib import Path
 
 import pandas as pd
-import requests
+
+from src.fpl import get
 
 DATA_URL = (
     "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/"
     "master/data/{season}/gws/merged_gw.csv"
 )
-FPL_API = "https://fantasy.premierleague.com/api"
 SEASONS = ["2024-25", "2025-26", "2026-27"]
 # The official API only serves the season in progress, so this must be the last entry.
 CURRENT_SEASON = SEASONS[-1]
@@ -42,15 +42,6 @@ def _fetch_current_season() -> pd.DataFrame:
     stats summed and the venue of the first match. Price is the current one, not the
     price at the time of the match.
     """
-    session = requests.Session()
-    # The API rejects requests without a browser-like user agent.
-    session.headers["User-Agent"] = "Mozilla/5.0"
-
-    def get(path: str):
-        response = session.get(f"{FPL_API}/{path}/", timeout=30)
-        response.raise_for_status()
-        return response.json()
-
     bootstrap = get("bootstrap-static")
     teams = {team["id"]: team["name"] for team in bootstrap["teams"]}
     positions = {pos["id"]: pos["singular_name_short"] for pos in bootstrap["element_types"]}

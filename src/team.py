@@ -3,7 +3,7 @@
 import pandas as pd
 
 TEAM_SIZE = 11
-# Minimum and maximum number of players per position in a valid FPL formation.
+# Minimum og maksimum antall spillere for FPL formasjonen.
 FORMATION_LIMITS = {"GK": (1, 1), "DEF": (3, 5), "MID": (2, 5), "FWD": (1, 3)}
 
 
@@ -14,7 +14,7 @@ def pick_best_team(players: pd.DataFrame, points: str = "predicted_points") -> p
     """
     ranked = players.sort_values(points, ascending=False).reset_index(drop=True)
 
-    # Fill the minimum for each position first, then the open spots with the best players left.
+    # Fyll inn minimum antall spillere for hver posisjon først, og fyll deretter opp til maks antall spillere.
     picked = []
     for position, (minimum, _) in FORMATION_LIMITS.items():
         picked += list(ranked.index[ranked["position"] == position][:minimum])
