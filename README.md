@@ -32,7 +32,7 @@ Før hver runde lagres prediksjonene fra alle modellene, slik at de kan sammenli
 python -m src.snapshot
 ```
 
-Filen havner i `predictions/` og må committes før første kamp i runden. Etter kampstart nekter skriptet å lagre. Resultatene vises på siden «Live-test» i appen når runden er ferdigspilt.
+Filen havner i `predictions/`. En runde lagres bare én gang, og aldri etter at første kamp har startet. Skriptet kjøres også daglig av GitHub Actions (`.github/workflows/lagre-prediksjoner.yml`), som committer filen. Resultatene vises på siden «Live-test» i appen når runden er ferdigspilt.
 
 ## Struktur
 
