@@ -1,0 +1,32 @@
+[theme]
+base = "dark"
+primaryColor = "#00FF87"
+backgroundColor = "#0B0E14"
+secondaryBackgroundColor = "#111622"
+textColor = "#E1E2EB"
+borderColor = "#232A3A"
+baseRadius = "8px"
+showWidgetBorder = true
+
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Outfit:https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap"
+headingFontWeights = [800, 700, 700, 600, 600, 600]
+
+# Signalfarger: grønn for gode verdier, rosa for vanskelige kamper og feil.
+greenColor = "#00FF87"
+blueColor = "#04F5FF"
+violetColor = "#F7AFF2"
+yellowColor = "#FFD000"
+redColor = "#FF2882"
+grayColor = "#A3ADC2"
+
+# Dempede serier som kan skilles fra hverandre også ved fargeblindhet.
+chartCategoricalColors = ["#199e70", "#3987e5", "#d55181", "#c98500"]
+
+dataframeHeaderBackgroundColor = "#0B0E14"
+dataframeBorderColor = "#1B2130"
+
+[theme.sidebar]
+backgroundColor = "#0E1119"
+secondaryBackgroundColor = "#182030"
+borderColor = "#232A3A"

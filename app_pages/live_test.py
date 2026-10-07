@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 
+from src.charts import error_bars
 from src.data import CURRENT_SEASON, POSITION_NAMES
 from src.loaders import load_players
 from src.snapshot import load_selection, load_snapshots
@@ -59,17 +60,7 @@ else:
     per_gameweek["Samlet"] = errors.mean()
     chart, table = st.columns([3, 2])
     with chart:
-        st.bar_chart(
-            per_gameweek["Samlet"].rename_axis("model").reset_index(),
-            x="model",
-            y="Samlet",
-            horizontal=True,
-            sort="Samlet",
-            # I et liggende diagram er x kategoriene, så det er y som er tallaksen.
-            x_label="",
-            y_label="MAE (poeng)",
-            alt="Samlet feil per modell på de lagrede rundene",
-        )
+        st.altair_chart(error_bars(per_gameweek["Samlet"]), alt="Samlet feil per modell på de lagrede rundene")
     with table:
         st.dataframe(
             per_gameweek.sort_values("Samlet"),

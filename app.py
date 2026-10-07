@@ -54,11 +54,11 @@ with st.sidebar:
 is_played = gameweek != next_gameweek
 if not is_played:
     players = upcoming.copy()
-    caption = f"Prediksjoner for runde {gameweek} i {season}, basert på formen til og med runde {gameweek - 1}."
+    caption = f"Basert på formen til og med runde {gameweek - 1}."
 else:
     players = played[played["GW"] == gameweek].copy()
     caption = (
-        f"Prediksjoner for runde {gameweek} i {season}, basert på formen før runden. "
+        "Basert på formen før runden. "
         "Modellen er trent på disse kampene, så den treffer bedre her enn den vil gjøre på nye kamper."
     )
 
@@ -72,6 +72,12 @@ st.session_state.players = players
 st.session_state.is_played = is_played
 st.session_state.model = model
 
-st.caption(f"{caption} {model_name} har en snittfeil (MAE) på {metrics.loc[model_name, 'mae']:.2f} poeng på testsettet.")
+with st.container(border=True, horizontal=True, vertical_alignment="center"):
+    st.badge(f"Runde {gameweek}", icon=":material/sports_soccer:", color="green")
+    st.markdown(
+        f"**{season}** · modell: :green[**{model_name}**] · "
+        f"snittfeil {metrics.loc[model_name, 'mae']:.2f} poeng på testsettet"
+    )
+    st.caption(caption)
 
 page.run()

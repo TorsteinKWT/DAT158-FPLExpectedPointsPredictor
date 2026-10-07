@@ -28,3 +28,9 @@ def pick_best_team(players: pd.DataFrame, points: str = "predicted_points") -> p
             counts[position] += 1
 
     return ranked.loc[picked].sort_values(points, ascending=False)
+
+
+def pick_captains(team: pd.DataFrame, points: str = "predicted_points") -> tuple[pd.Series, pd.Series]:
+    """Returner kaptein og visekaptein: de to spillerne med flest poeng."""
+    top = team.nlargest(2, points)
+    return top.iloc[0], top.iloc[1]
