@@ -24,6 +24,16 @@ Start appen:
 streamlit run app.py
 ```
 
+## Live-test
+
+Før hver runde lagres prediksjonene fra alle modellene, slik at de kan sammenlignes med fasiten etterpå:
+
+```bash
+python -m src.snapshot
+```
+
+Filen havner i `predictions/`. En runde lagres bare én gang, og aldri etter at første kamp har startet. Skriptet kjøres også daglig av GitHub Actions (`.github/workflows/lagre-prediksjoner.yml`), som committer filen. Resultatene vises på siden «Live-test» i appen når runden er ferdigspilt.
+
 ## Struktur
 
 - `src/data.py` – datainnlasting og feature engineering, delt mellom trening og app
