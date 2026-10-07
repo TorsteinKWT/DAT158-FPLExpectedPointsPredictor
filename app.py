@@ -11,6 +11,7 @@ page = st.navigation(
         st.Page("app_pages/best_team.py", title="Beste lag", icon=":material/trophy:", url_path="beste-lag"),
         st.Page("app_pages/my_team.py", title="Mitt lag", icon=":material/person:", url_path="mitt-lag"),
         st.Page("app_pages/models.py", title="Modeller", icon=":material/monitoring:", url_path="modeller"),
+        st.Page("app_pages/live_test.py", title="Live-test", icon=":material/fact_check:", url_path="live-test"),
     ],
     position="top",
 )
