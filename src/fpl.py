@@ -1,4 +1,4 @@
-"""Client for the official FPL API."""
+"""Klient for det offisielle FPL-API-et."""
 
 import pandas as pd
 import requests
@@ -18,9 +18,9 @@ def get(path: str):
 
 
 def fetch_next_fixtures() -> tuple[int, pd.DataFrame]:
-    """Return the next gameweek and one row per team per match in it.
+    """Returner neste runde og én rad per lag per kamp i den.
 
-    A team with a double gameweek gets two rows, and a team with a blank gameweek gets none.
+    Et lag med dobbeltrunde får to rader, og et lag med blank runde får ingen.
     """
     bootstrap = get("bootstrap-static")
     teams = {team["id"]: team["name"] for team in bootstrap["teams"]}
@@ -37,10 +37,10 @@ def fetch_next_fixtures() -> tuple[int, pd.DataFrame]:
 
 
 def fetch_entry(entry_id: int) -> tuple[str, int, pd.DataFrame]:
-    """Return a manager's team name, and their squad as picked in their latest gameweek.
+    """Returner lagnavnet til en manager, og troppen slik den var satt opp i siste runde.
 
-    The API only shows picks for gameweeks that have started, so transfers and lineup
-    changes made for the next gameweek are not included.
+    API-et viser bare laguttak for runder som har startet, så bytter og endringer i
+    laguttaket for neste runde er ikke med.
     """
     entry = get(f"entry/{entry_id}")
     gameweek = entry["current_event"]

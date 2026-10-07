@@ -1,4 +1,4 @@
-"""Cached loaders shared by the app pages."""
+"""Cachede innlastere som deles av sidene i appen."""
 
 from pathlib import Path
 
@@ -18,7 +18,7 @@ def load_model():
 
 @st.cache_data(ttl="1h", max_entries=len(SEASONS))
 def load_players(season: str):
-    """Return per-match rows for played gameweeks, and one row per player for the next match."""
+    """Returner rader per kamp for spilte runder, og én rad per spiller for neste kamp."""
     raw = load_season(season, use_cache=False)
     return build_training_frame(raw), build_prediction_frame(raw), int(raw["GW"].max())
 

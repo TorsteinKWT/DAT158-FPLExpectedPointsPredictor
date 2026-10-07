@@ -5,7 +5,7 @@ from src.team import pick_best_team
 
 is_played = st.session_state.is_played
 
-# A double gameweek has one row per match, so add them up to get the player's gameweek total.
+# En dobbeltrunde har én rad per kamp, så de summeres for å få spillerens total for runden.
 totals = {"predicted_points": "sum"}
 if is_played:
     totals["total_points"] = "sum"

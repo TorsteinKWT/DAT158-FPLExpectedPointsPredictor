@@ -1,4 +1,4 @@
-"""Train the expected points model. Run from the project root: python -m src.train"""
+"""Tren modellen for forventede poeng. Kjøres fra prosjektroten: python -m src.train"""
 
 from pathlib import Path
 
