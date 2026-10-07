@@ -2,11 +2,11 @@ import requests
 import streamlit as st
 
 from src.data import CURRENT_SEASON
-from src.loaders import load_entry, load_model, load_next_fixtures, load_players
+from src.loaders import load_entry, load_model, load_players
 from src.team import pick_best_team
 
 st.caption(
-    f"Always uses {CURRENT_SEASON} and the real fixtures of the next gameweek, whatever is chosen in the sidebar."
+    f"Always uses {CURRENT_SEASON} and the next gameweek, whatever is chosen in the sidebar."
 )
 
 entry_id = st.text_input(
@@ -29,17 +29,19 @@ except requests.HTTPError:
     st.stop()
 
 bundle = load_model()
-next_gameweek, fixtures = load_next_fixtures()
-_, form, _ = load_players(CURRENT_SEASON)
+_, upcoming = load_players(CURRENT_SEASON)
+if upcoming["GW"].isna().all():
+    st.info("There is no upcoming gameweek to predict.", icon=":material/info:")
+    st.stop()
+next_gameweek = int(upcoming["GW"].dropna().iat[0])
 
-squad = picks.merge(form, on="element", how="left")
+# Én rad per spiller per kamp i neste runde. Spillere uten kamp har en rad uten motstander og får null poeng.
+squad = picks.merge(upcoming, on="element", how="left")
 unknown = squad["name"].isna()
 if unknown.any():
     st.warning(f"Left out {unknown.sum()} player(s) without any matches this season.", icon=":material/warning:")
     squad = squad[~unknown]
 
-# Én rad per spiller per kamp i neste runde. Spillere uten kamp får en rad uten motstander og null poeng.
-squad = squad.merge(fixtures, on="team", how="left")
 squad["predicted_points"] = bundle["model"].predict(squad[bundle["features"]])
 squad.loc[squad["opponent"].isna(), "predicted_points"] = 0
 squad["fixture"] = (squad["opponent"] + squad["was_home"].map({1: " (H)", 0: " (A)"})).fillna("No match")

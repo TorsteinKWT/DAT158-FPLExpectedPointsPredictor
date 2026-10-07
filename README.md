@@ -1,6 +1,6 @@
 # FPL Expected Points Predictor
 
-DAT158-prosjekt: predikerer forventede Fantasy Premier League-poeng for en spillers neste kamp, basert på formen de siste fem kampene.
+DAT158-prosjekt: predikerer forventede Fantasy Premier League-poeng for en spillers neste kamp, basert på formen de siste fem kampene, motstanderens form og FPLs vanskelighetsgrad for kampen (FDR).
 
 ## Oppsett
 

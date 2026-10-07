@@ -8,11 +8,13 @@ with st.sidebar:
     positions = st.pills("Positions", POSITIONS, selection_mode="multi", default=POSITIONS)
     search = st.text_input("Search player or team")
 
-columns = ["name", "team", "position", "price", "total_points_roll", "minutes_roll", "predicted_points"]
+columns = [
+    "name", "team", "position", "fixture", "fdr", "price",
+    "total_points_roll", "minutes_roll", "predicted_points",
+]  # fmt: skip
 if st.session_state.is_played:
-    columns.insert(3, "venue")
     columns.append("total_points")
-    st.caption("One row per match, so players with a double gameweek can appear twice.")
+st.caption("One row per match, so players with a double gameweek can appear twice.")
 
 shown = players[players["position"].isin(positions)]
 if search:
@@ -26,7 +28,10 @@ st.dataframe(
         "name": "Player",
         "team": "Team",
         "position": "Position",
-        "venue": "Venue",
+        "fixture": "Fixture",
+        "fdr": st.column_config.NumberColumn(
+            "FDR", format="%d", help="FPL's fixture difficulty rating, from 1 (easy) to 5 (hard)."
+        ),
         "price": st.column_config.NumberColumn("Price", format="£%.1fm"),
         "total_points_roll": st.column_config.NumberColumn("Avg points (last 5)", format="%.1f"),
         "minutes_roll": st.column_config.NumberColumn("Avg minutes (last 5)", format="%.0f"),

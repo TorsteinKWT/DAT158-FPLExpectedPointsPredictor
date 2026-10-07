@@ -3,8 +3,6 @@ import streamlit as st
 from src.data import SEASONS
 from src.loaders import MODEL_PATH, load_model, load_players
 
-NEXT_MATCH = "Next match"
-
 st.set_page_config(page_title="FPL expected points", page_icon=":material/sports_soccer:", layout="wide")
 
 page = st.navigation(
@@ -31,24 +29,24 @@ metrics = bundle["metrics"]
 
 with st.sidebar:
     season = st.selectbox("Season", SEASONS, index=len(SEASONS) - 1)
-    played, upcoming, latest_gw = load_players(season)
+    played, upcoming = load_players(season)
+    # Spillere uten kamp i neste runde har ingen motstander og vises ikke. Etter siste runde er det ingen igjen.
+    upcoming = upcoming.dropna(subset=["opponent"])
+    next_gameweek = None if upcoming.empty else int(upcoming["GW"].iat[0])
     # Første gameweek mangler i dataene, så vi må hente den fra de faktiske kampene.
     gameweeks = sorted((int(gw) for gw in played["GW"].unique()), reverse=True)
     gameweek = st.selectbox(
         "Gameweek",
-        [NEXT_MATCH, *gameweeks],
-        format_func=lambda gw: gw if gw == NEXT_MATCH else f"Gameweek {gw}",
+        gameweeks if next_gameweek is None else [next_gameweek, *gameweeks],
+        format_func=lambda gw: f"Gameweek {gw} (next)" if gw == next_gameweek else f"Gameweek {gw}",
     )
-    if gameweek == NEXT_MATCH:
-        venue = st.segmented_control("Venue", ["Home", "Away"], default="Home")
 
-if gameweek == NEXT_MATCH:
+is_played = gameweek != next_gameweek
+if not is_played:
     players = upcoming.copy()
-    players["was_home"] = int(venue == "Home")
-    caption = f"Predictions for each player's next match, based on form through gameweek {latest_gw} of {season}."
+    caption = f"Predictions for gameweek {gameweek} of {season}, based on form through gameweek {gameweek - 1}."
 else:
     players = played[played["GW"] == gameweek].copy()
-    players["venue"] = players["was_home"].map({1: "Home", 0: "Away"})
     caption = (
         f"Predictions for gameweek {gameweek} of {season}, based on form before that gameweek. "
         "The model was trained on these matches, so it fits them better than it will fit new ones."
@@ -56,10 +54,11 @@ else:
 
 players["predicted_points"] = bundle["model"].predict(players[bundle["features"]])
 players["price"] = players["value"] / 10
+players["fixture"] = players["opponent"] + players["was_home"].map({1: " (H)", 0: " (A)"})
 
 # Delt med st.session_state for å kunne bruke dem i andre sider.
 st.session_state.players = players
-st.session_state.is_played = gameweek != NEXT_MATCH
+st.session_state.is_played = is_played
 
 st.caption(f"{caption} Test MAE {metrics['mae']:.2f} points (baseline {metrics['baseline_mae']:.2f}).")
 
