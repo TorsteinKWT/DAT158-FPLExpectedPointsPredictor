@@ -1,4 +1,4 @@
-"""Train the expected points model. Run from the project root: python -m src.train"""
+"""Tren modellen for forventede poeng. Kjøres fra prosjektroten: python -m src.train"""
 
 from pathlib import Path
 
@@ -17,7 +17,7 @@ def main() -> None:
     raw = pd.concat([load_season(season) for season in SEASONS], ignore_index=True)
     data = build_training_frame(raw).sort_values("kickoff_time")
 
-    # Split on time so the model is evaluated on matches played after the ones it saw.
+    # Split basert på tidspunkt, slik at vi ikke får "lekkasje" fra fremtidige kamper inn i treningsdataene.
     split = int(len(data) * (1 - TEST_FRACTION))
     train, test = data.iloc[:split], data.iloc[split:]
 
@@ -26,7 +26,7 @@ def main() -> None:
 
     metrics = {
         "mae": mean_absolute_error(test[TARGET], model.predict(test[FEATURES])),
-        # Baseline: predict the player's average points over their recent matches.
+        # Baseline: predicte gjennomsnittet av de siste 3 kampene for hver spiller.
         "baseline_mae": mean_absolute_error(test[TARGET], test[f"{TARGET}_roll"]),
         "n_train": len(train),
         "n_test": len(test),

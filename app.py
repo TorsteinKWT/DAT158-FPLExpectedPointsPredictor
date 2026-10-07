@@ -1,35 +1,24 @@
-from pathlib import Path
-
-import joblib
 import streamlit as st
 
-from src.data import SEASONS, build_prediction_frame, build_training_frame, load_season
+from src.data import SEASONS
+from src.loaders import MODEL_PATH, load_model, load_players
 
-MODEL_PATH = Path(__file__).parent / "model.joblib"
 NEXT_MATCH = "Next match"
 
 st.set_page_config(page_title="FPL expected points", page_icon=":material/sports_soccer:", layout="wide")
-
-
-@st.cache_resource
-def load_model():
-    return joblib.load(MODEL_PATH)
-
-
-@st.cache_data(ttl="1h", max_entries=len(SEASONS))
-def load_players(season: str):
-    """Return per-match rows for played gameweeks, and one row per player for the next match."""
-    raw = load_season(season, use_cache=False)
-    return build_training_frame(raw), build_prediction_frame(raw), int(raw["GW"].max())
-
 
 page = st.navigation(
     [
         st.Page("app_pages/players.py", title="Players", icon=":material/groups:"),
         st.Page("app_pages/best_team.py", title="Best team", icon=":material/trophy:"),
+        st.Page("app_pages/my_team.py", title="My team", icon=":material/person:"),
     ],
     position="top",
 )
+
+# Streamlit sletter verdien til et felt som ikke vises, så lag-ID-en må holdes i live når man bytter side.
+if "entry_id" in st.session_state:
+    st.session_state.entry_id = st.session_state.entry_id
 
 st.title("FPL expected points")
 
@@ -43,7 +32,7 @@ metrics = bundle["metrics"]
 with st.sidebar:
     season = st.selectbox("Season", SEASONS, index=len(SEASONS) - 1)
     played, upcoming, latest_gw = load_players(season)
-    # The first gameweek is missing here because there is no earlier form to predict from.
+    # Første gameweek mangler i dataene, så vi må hente den fra de faktiske kampene.
     gameweeks = sorted((int(gw) for gw in played["GW"].unique()), reverse=True)
     gameweek = st.selectbox(
         "Gameweek",
@@ -68,7 +57,7 @@ else:
 players["predicted_points"] = bundle["model"].predict(players[bundle["features"]])
 players["price"] = players["value"] / 10
 
-# Shared with the pages, which only differ in how they present the same predictions.
+# Delt med st.session_state for å kunne bruke dem i andre sider.
 st.session_state.players = players
 st.session_state.is_played = gameweek != NEXT_MATCH
 

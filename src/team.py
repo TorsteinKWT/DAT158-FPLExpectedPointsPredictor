@@ -1,20 +1,20 @@
-"""Pick the best starting eleven from a set of predictions."""
+"""Velg den beste startelleveren ut fra et sett med prediksjoner."""
 
 import pandas as pd
 
 TEAM_SIZE = 11
-# Minimum and maximum number of players per position in a valid FPL formation.
+# Minimum og maksimum antall spillere for FPL formasjonen.
 FORMATION_LIMITS = {"GK": (1, 1), "DEF": (3, 5), "MID": (2, 5), "FWD": (1, 3)}
 
 
 def pick_best_team(players: pd.DataFrame, points: str = "predicted_points") -> pd.DataFrame:
-    """Return the eleven players with the highest total points in a valid formation.
+    """Returner de elleve spillerne med høyest samlet poengsum i en gyldig formasjon.
 
-    Only the formation rules apply: there is no budget and no limit per club.
+    Bare formasjonsreglene gjelder: det er ikke noe budsjett og ingen grense per klubb.
     """
     ranked = players.sort_values(points, ascending=False).reset_index(drop=True)
 
-    # Fill the minimum for each position first, then the open spots with the best players left.
+    # Fyll inn minimum antall spillere for hver posisjon først, og fyll deretter opp til maks antall spillere.
     picked = []
     for position, (minimum, _) in FORMATION_LIMITS.items():
         picked += list(ranked.index[ranked["position"] == position][:minimum])

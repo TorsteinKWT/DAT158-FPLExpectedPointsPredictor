@@ -1,17 +1,17 @@
-"""Data loading and feature engineering shared by training and the app."""
+"""Datainnlasting og feature engineering, delt mellom trening og app."""
 
 from pathlib import Path
 
 import pandas as pd
-import requests
+
+from src.fpl import get
 
 DATA_URL = (
     "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/"
     "master/data/{season}/gws/merged_gw.csv"
 )
-FPL_API = "https://fantasy.premierleague.com/api"
 SEASONS = ["2024-25", "2025-26", "2026-27"]
-# The official API only serves the season in progress, so this must be the last entry.
+# Det offisielle API-et gir bare sesongen som pågår, så denne må være den siste i listen.
 CURRENT_SEASON = SEASONS[-1]
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 
@@ -36,21 +36,6 @@ FEATURES = (
 
 
 def _fetch_current_season() -> pd.DataFrame:
-    """Fetch every finished gameweek of the season in progress from the official FPL API.
-
-    The API reports stats per gameweek, so a double gameweek becomes one row with the
-    stats summed and the venue of the first match. Price is the current one, not the
-    price at the time of the match.
-    """
-    session = requests.Session()
-    # The API rejects requests without a browser-like user agent.
-    session.headers["User-Agent"] = "Mozilla/5.0"
-
-    def get(path: str):
-        response = session.get(f"{FPL_API}/{path}/", timeout=30)
-        response.raise_for_status()
-        return response.json()
-
     bootstrap = get("bootstrap-static")
     teams = {team["id"]: team["name"] for team in bootstrap["teams"]}
     positions = {pos["id"]: pos["singular_name_short"] for pos in bootstrap["element_types"]}
@@ -63,7 +48,7 @@ def _fetch_current_season() -> pd.DataFrame:
             continue
         for element in get(f"event/{event['id']}/live")["elements"]:
             player = players.get(element["id"])
-            # No fixture means the player's team had a blank gameweek.
+            # Ingen kamp betyr at laget til spilleren hadde en blank runde.
             if player is None or not element["explain"]:
                 continue
             fixture = fixtures[element["explain"][0]["fixture"]]
@@ -87,10 +72,9 @@ def _fetch_current_season() -> pd.DataFrame:
 
 
 def load_season(season: str, use_cache: bool = True) -> pd.DataFrame:
-    """Load one season of per-match player data, one row per player per fixture."""
     cache_file = RAW_DIR / f"{season}.csv"
     if season == CURRENT_SEASON:
-        # Never cached on disk, since new gameweeks keep arriving.
+        # Lagres aldri på disk, siden det stadig kommer nye runder.
         df = _fetch_current_season()
     elif use_cache and cache_file.exists():
         df = pd.read_csv(cache_file)
@@ -115,7 +99,7 @@ def _add_position_dummies(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_training_frame(df: pd.DataFrame) -> pd.DataFrame:
-    """Add form features computed only from matches before the one being predicted."""
+    """Legg til form-features som bare bygger på kampene før den som skal predikeres."""
     df = df.copy()
     grouped = df.groupby(["season", "element"])
     for stat in ROLLING_STATS:
@@ -123,12 +107,12 @@ def build_training_frame(df: pd.DataFrame) -> pd.DataFrame:
             lambda s: s.shift(1).rolling(WINDOW, min_periods=1).mean()
         )
     df = _add_position_dummies(df)
-    # A player's first match of the season has no history to predict from.
+    # Den første kampen til en spiller i sesongen har ingen historikk å predikere fra.
     return df.dropna(subset=[f"{TARGET}_roll"])
 
 
 def build_prediction_frame(df: pd.DataFrame) -> pd.DataFrame:
-    """One row per player with form over their most recent matches, for the next match."""
+    """Én rad per spiller med formen fra de siste kampene, for neste kamp."""
     recent = df.groupby("element").tail(WINDOW)
     form = recent.groupby("element")[ROLLING_STATS].mean().add_suffix("_roll")
     latest = df.groupby("element").tail(1).set_index("element")
