@@ -3,7 +3,8 @@ import streamlit as st
 
 from src.data import CURRENT_SEASON, POSITION_NAMES
 from src.loaders import load_entry, load_model, load_players
-from src.team import pick_best_team
+from src.team import pick_best_team, pick_captains
+from src.ui import captain_card
 
 st.caption(f"Bruker alltid {CURRENT_SEASON} og neste runde, uansett hva som er valgt i sidepanelet.")
 
@@ -65,6 +66,9 @@ starters = squad[squad["is_starter"]]
 # Kapteinen får doble poeng.
 lineup_points = starters["predicted_points"].sum() + squad.loc[squad["is_captain"], "predicted_points"].sum()
 best_lineup = pick_best_team(squad)
+# Kapteinen må stå i startelleveren, så anbefalingen velges blant dem som starter.
+captain, vice = pick_captains(starters)
+squad["recommended"] = squad["element"].map({captain["element"]: "Kaptein", vice["element"]: "Visekaptein"}).fillna("")
 best_points = best_lineup["predicted_points"].sum() + best_lineup["predicted_points"].max()
 
 st.subheader(team_name)
@@ -80,14 +84,28 @@ with st.container(horizontal=True):
     )
     st.metric("På benken", f"{squad.loc[~squad['is_starter'], 'predicted_points'].sum():.1f}", border=True)
 
+captain_card(captain, vice)
+current = squad[squad["is_captain"]]
+if not current.empty and current["element"].iat[0] != captain["element"]:
+    difference = captain["predicted_points"] - current["predicted_points"].iat[0]
+    st.caption(
+        f"Du har {current['name'].iat[0]} som kaptein nå. "
+        f"Med {captain['name']} er forventningen {difference:.1f} poeng høyere."
+    )
+elif not current.empty:
+    st.caption("Det er samme kaptein som du har nå.")
+
 st.dataframe(
-    squad[["name", "team", "position", "fixture", "role", "predicted_points"]].replace({"position": POSITION_NAMES}),
+    squad[["name", "team", "position", "fixture", "role", "recommended", "predicted_points"]].replace(
+        {"position": POSITION_NAMES}
+    ),
     column_config={
         "name": "Spiller",
         "team": "Lag",
         "position": "Posisjon",
         "fixture": "Kamp",
-        "role": "Rolle",
+        "role": "Rolle nå",
+        "recommended": "Anbefalt",
         "predicted_points": st.column_config.ProgressColumn(
             "Forventede poeng",
             format="%.2f",

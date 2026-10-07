@@ -1,12 +1,13 @@
 import streamlit as st
 
+from src.charts import error_bars
 from src.data import CURRENT_SEASON
 from src.loaders import load_model, load_players
 from src.models import BASELINE
 
 MEASURES = {"Alle spillere": "mae", "Spillere som spilte": "mae_played"}
-# Faste farger per modell, med baseline i grått som referanse.
-COLORS = {"Gradient boosting": "blue", "Random forest": "violet", "Lineær regresjon": "orange", BASELINE: "gray"}
+# Faste farger per modell, i en rekkefølge der naboene kan skilles fra hverandre også ved fargeblindhet.
+COLORS = {"Gradient boosting": "#199e70", "Random forest": "#3987e5", "Lineær regresjon": "#d55181", BASELINE: "#c98500"}
 
 bundle = load_model()
 metrics, backtest = bundle["metrics"], bundle["backtest"]
@@ -24,6 +25,14 @@ measure = st.segmented_control(
 )
 column = MEASURES[measure or "Alle spillere"]
 
+best = metrics[column].idxmin()
+improvement = 1 - metrics.loc[best, column] / metrics.loc[BASELINE, column]
+with st.container(horizontal=True):
+    st.metric("Beste modell", best, border=True)
+    st.metric("Feil, beste modell", f"{metrics.loc[best, column]:.3f}", border=True)
+    st.metric(f"Feil, {BASELINE.lower()}", f"{metrics.loc[BASELINE, column]:.3f}", border=True)
+    st.metric("Forbedring fra baseline", f"{improvement:.1%}", border=True)
+
 st.subheader("Feil på testsettet")
 st.caption(
     f"Hver modell er trent på de eldste 80 % av kampene og testet på de nyeste 20 % "
@@ -31,17 +40,7 @@ st.caption(
 )
 chart, table = st.columns([3, 2])
 with chart:
-    st.bar_chart(
-        metrics.rename_axis("model").reset_index(),
-        x="model",
-        y=column,
-        horizontal=True,
-        sort=column,
-        # I et liggende diagram er x kategoriene, så det er y som er tallaksen.
-        x_label="",
-        y_label="MAE (poeng)",
-        alt="Feil på testsettet per modell",
-    )
+    st.altair_chart(error_bars(metrics[column]), alt="Feil på testsettet per modell")
 with table:
     st.dataframe(
         metrics.sort_values(column),
