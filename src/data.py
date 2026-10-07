@@ -21,6 +21,8 @@ RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 
 WINDOW = 5
 POSITIONS = ["GK", "DEF", "MID", "FWD"]
+# Navnene som vises i appen.
+POSITION_NAMES = {"GK": "Keeper", "DEF": "Forsvar", "MID": "Midtbane", "FWD": "Angrep"}
 ROLLING_STATS = [
     "total_points",
     "minutes",

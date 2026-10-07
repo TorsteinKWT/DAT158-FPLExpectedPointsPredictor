@@ -3,13 +3,14 @@ import streamlit as st
 from src.data import SEASONS
 from src.loaders import MODEL_PATH, load_model, load_players
 
-st.set_page_config(page_title="FPL expected points", page_icon=":material/sports_soccer:", layout="wide")
+st.set_page_config(page_title="Forventede FPL-poeng", page_icon=":material/sports_soccer:", layout="wide")
 
 page = st.navigation(
     [
-        st.Page("app_pages/players.py", title="Players", icon=":material/groups:"),
-        st.Page("app_pages/best_team.py", title="Best team", icon=":material/trophy:"),
-        st.Page("app_pages/my_team.py", title="My team", icon=":material/person:"),
+        st.Page("app_pages/players.py", title="Spillere", icon=":material/groups:"),
+        st.Page("app_pages/best_team.py", title="Beste lag", icon=":material/trophy:", url_path="beste-lag"),
+        st.Page("app_pages/my_team.py", title="Mitt lag", icon=":material/person:", url_path="mitt-lag"),
+        st.Page("app_pages/models.py", title="Modeller", icon=":material/monitoring:", url_path="modeller"),
     ],
     position="top",
 )
@@ -18,17 +19,25 @@ page = st.navigation(
 if "entry_id" in st.session_state:
     st.session_state.entry_id = st.session_state.entry_id
 
-st.title("FPL expected points")
+st.title("Forventede FPL-poeng")
 
 if not MODEL_PATH.exists() or MODEL_PATH.stat().st_size == 0:
-    st.error("No trained model found. Run `python -m src.train` first.", icon=":material/error:")
+    st.error("Fant ingen trent modell. Kjør `python -m src.train` først.", icon=":material/error:")
     st.stop()
 
 bundle = load_model()
 metrics = bundle["metrics"]
 
 with st.sidebar:
-    season = st.selectbox("Season", SEASONS, index=len(SEASONS) - 1)
+    # Modellen med lavest feil på testsettet er forhåndsvalgt.
+    model_names = list(bundle["models"])
+    model_name = st.selectbox(
+        "Modell",
+        model_names,
+        index=model_names.index(metrics["mae"].idxmin()),
+        help="Modellen som brukes til prediksjonene på alle sidene. De sammenlignes på siden Modeller.",
+    )
+    season = st.selectbox("Sesong", SEASONS, index=len(SEASONS) - 1)
     played, upcoming = load_players(season)
     # Spillere uten kamp i neste runde har ingen motstander og vises ikke. Etter siste runde er det ingen igjen.
     upcoming = upcoming.dropna(subset=["opponent"])
@@ -36,30 +45,32 @@ with st.sidebar:
     # Første gameweek mangler i dataene, så vi må hente den fra de faktiske kampene.
     gameweeks = sorted((int(gw) for gw in played["GW"].unique()), reverse=True)
     gameweek = st.selectbox(
-        "Gameweek",
+        "Runde",
         gameweeks if next_gameweek is None else [next_gameweek, *gameweeks],
-        format_func=lambda gw: f"Gameweek {gw} (next)" if gw == next_gameweek else f"Gameweek {gw}",
+        format_func=lambda gw: f"Runde {gw} (neste)" if gw == next_gameweek else f"Runde {gw}",
     )
 
 is_played = gameweek != next_gameweek
 if not is_played:
     players = upcoming.copy()
-    caption = f"Predictions for gameweek {gameweek} of {season}, based on form through gameweek {gameweek - 1}."
+    caption = f"Prediksjoner for runde {gameweek} i {season}, basert på formen til og med runde {gameweek - 1}."
 else:
     players = played[played["GW"] == gameweek].copy()
     caption = (
-        f"Predictions for gameweek {gameweek} of {season}, based on form before that gameweek. "
-        "The model was trained on these matches, so it fits them better than it will fit new ones."
+        f"Prediksjoner for runde {gameweek} i {season}, basert på formen før runden. "
+        "Modellen er trent på disse kampene, så den treffer bedre her enn den vil gjøre på nye kamper."
     )
 
-players["predicted_points"] = bundle["model"].predict(players[bundle["features"]])
+model = bundle["models"][model_name]
+players["predicted_points"] = model.predict(players[bundle["features"]])
 players["price"] = players["value"] / 10
-players["fixture"] = players["opponent"] + players["was_home"].map({1: " (H)", 0: " (A)"})
+players["fixture"] = players["opponent"] + players["was_home"].map({1: " (H)", 0: " (B)"})
 
 # Delt med st.session_state for å kunne bruke dem i andre sider.
 st.session_state.players = players
 st.session_state.is_played = is_played
+st.session_state.model = model
 
-st.caption(f"{caption} Test MAE {metrics['mae']:.2f} points (baseline {metrics['baseline_mae']:.2f}).")
+st.caption(f"{caption} {model_name} har en snittfeil (MAE) på {metrics.loc[model_name, 'mae']:.2f} poeng på testsettet.")
 
 page.run()

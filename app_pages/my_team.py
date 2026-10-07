@@ -1,37 +1,35 @@
 import requests
 import streamlit as st
 
-from src.data import CURRENT_SEASON
+from src.data import CURRENT_SEASON, POSITION_NAMES
 from src.loaders import load_entry, load_model, load_players
 from src.team import pick_best_team
 
-st.caption(
-    f"Always uses {CURRENT_SEASON} and the next gameweek, whatever is chosen in the sidebar."
-)
+st.caption(f"Bruker alltid {CURRENT_SEASON} og neste runde, uansett hva som er valgt i sidepanelet.")
 
 entry_id = st.text_input(
-    "FPL team ID",
+    "Lag-ID i FPL",
     key="entry_id",
-    help="The number in the address of your Points page: fantasy.premierleague.com/entry/**1234567**/event/5",
+    help="Tallet i adressen til poengsiden din: fantasy.premierleague.com/entry/**1234567**/event/5",
     width=300,
 )
 
 if not entry_id:
     st.stop()
 if not entry_id.isdigit():
-    st.error("The team ID should be a number.", icon=":material/error:")
+    st.error("Lag-ID-en må være et tall.", icon=":material/error:")
     st.stop()
 
 try:
     team_name, picked_gameweek, picks = load_entry(int(entry_id))
 except requests.HTTPError:
-    st.error("Found no team with that ID.", icon=":material/error:")
+    st.error("Fant ikke noe lag med den ID-en.", icon=":material/error:")
     st.stop()
 
 bundle = load_model()
 _, upcoming = load_players(CURRENT_SEASON)
 if upcoming["GW"].isna().all():
-    st.info("There is no upcoming gameweek to predict.", icon=":material/info:")
+    st.info("Det er ingen kommende runde å predikere.", icon=":material/info:")
     st.stop()
 next_gameweek = int(upcoming["GW"].dropna().iat[0])
 
@@ -39,12 +37,12 @@ next_gameweek = int(upcoming["GW"].dropna().iat[0])
 squad = picks.merge(upcoming, on="element", how="left")
 unknown = squad["name"].isna()
 if unknown.any():
-    st.warning(f"Left out {unknown.sum()} player(s) without any matches this season.", icon=":material/warning:")
+    st.warning(f"{unknown.sum()} spiller(e) uten kamper denne sesongen er utelatt.", icon=":material/warning:")
     squad = squad[~unknown]
 
-squad["predicted_points"] = bundle["model"].predict(squad[bundle["features"]])
+squad["predicted_points"] = st.session_state.model.predict(squad[bundle["features"]])
 squad.loc[squad["opponent"].isna(), "predicted_points"] = 0
-squad["fixture"] = (squad["opponent"] + squad["was_home"].map({1: " (H)", 0: " (A)"})).fillna("No match")
+squad["fixture"] = (squad["opponent"] + squad["was_home"].map({1: " (H)", 0: " (B)"})).fillna("Ingen kamp")
 
 squad = squad.groupby("element", as_index=False, sort=False).agg(
     {
@@ -59,9 +57,9 @@ squad = squad.groupby("element", as_index=False, sort=False).agg(
     }
 )
 squad["role"] = "Starter"
-squad.loc[squad["is_vice_captain"], "role"] = "Vice-captain"
-squad.loc[squad["is_captain"], "role"] = "Captain"
-squad.loc[~squad["is_starter"], "role"] = "Bench"
+squad.loc[squad["is_vice_captain"], "role"] = "Visekaptein"
+squad.loc[squad["is_captain"], "role"] = "Kaptein"
+squad.loc[~squad["is_starter"], "role"] = "Benk"
 
 starters = squad[squad["is_starter"]]
 # Kapteinen får doble poeng.
@@ -70,28 +68,28 @@ best_lineup = pick_best_team(squad)
 best_points = best_lineup["predicted_points"].sum() + best_lineup["predicted_points"].max()
 
 st.subheader(team_name)
-st.caption(f"Squad as picked in gameweek {picked_gameweek}. Later transfers and lineup changes are not visible.")
+st.caption(f"Troppen slik den var satt opp i runde {picked_gameweek}. Senere bytter og endringer i laget vises ikke.")
 
 with st.container(horizontal=True):
-    st.metric(f"Expected points, gameweek {next_gameweek}", f"{lineup_points:.1f}", border=True)
+    st.metric(f"Forventede poeng, runde {next_gameweek}", f"{lineup_points:.1f}", border=True)
     st.metric(
-        "Best lineup from squad",
+        "Beste oppsett fra troppen",
         f"{best_points:.1f}",
         border=True,
-        help="The best eleven of your fifteen in a valid formation, with the top player as captain.",
+        help="De beste elleve av dine femten i en gyldig formasjon, med den beste spilleren som kaptein.",
     )
-    st.metric("On the bench", f"{squad.loc[~squad['is_starter'], 'predicted_points'].sum():.1f}", border=True)
+    st.metric("På benken", f"{squad.loc[~squad['is_starter'], 'predicted_points'].sum():.1f}", border=True)
 
 st.dataframe(
-    squad[["name", "team", "position", "fixture", "role", "predicted_points"]],
+    squad[["name", "team", "position", "fixture", "role", "predicted_points"]].replace({"position": POSITION_NAMES}),
     column_config={
-        "name": "Player",
-        "team": "Team",
-        "position": "Position",
-        "fixture": "Fixture",
-        "role": "Role",
+        "name": "Spiller",
+        "team": "Lag",
+        "position": "Posisjon",
+        "fixture": "Kamp",
+        "role": "Rolle",
         "predicted_points": st.column_config.ProgressColumn(
-            "Expected points",
+            "Forventede poeng",
             format="%.2f",
             min_value=0,
             max_value=float(squad["predicted_points"].max()),
@@ -99,5 +97,5 @@ st.dataframe(
     },
     hide_index=True,
     height="content",
-    alt="Your squad with expected points for the next gameweek",
+    alt="Troppen din med forventede poeng for neste runde",
 )
