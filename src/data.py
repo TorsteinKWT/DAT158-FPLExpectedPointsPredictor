@@ -3,12 +3,16 @@
 from pathlib import Path
 
 import pandas as pd
+import requests
 
 DATA_URL = (
     "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/"
     "master/data/{season}/gws/merged_gw.csv"
 )
+FPL_API = "https://fantasy.premierleague.com/api"
 SEASONS = ["2024-25", "2025-26", "2026-27"]
+# The official API only serves the season in progress, so this must be the last entry.
+CURRENT_SEASON = SEASONS[-1]
 RAW_DIR = Path(__file__).resolve().parent.parent / "data" / "raw"
 
 WINDOW = 5
@@ -31,10 +35,64 @@ FEATURES = (
 )
 
 
+def _fetch_current_season() -> pd.DataFrame:
+    """Fetch every finished gameweek of the season in progress from the official FPL API.
+
+    The API reports stats per gameweek, so a double gameweek becomes one row with the
+    stats summed and the venue of the first match. Price is the current one, not the
+    price at the time of the match.
+    """
+    session = requests.Session()
+    # The API rejects requests without a browser-like user agent.
+    session.headers["User-Agent"] = "Mozilla/5.0"
+
+    def get(path: str):
+        response = session.get(f"{FPL_API}/{path}/", timeout=30)
+        response.raise_for_status()
+        return response.json()
+
+    bootstrap = get("bootstrap-static")
+    teams = {team["id"]: team["name"] for team in bootstrap["teams"]}
+    positions = {pos["id"]: pos["singular_name_short"] for pos in bootstrap["element_types"]}
+    players = {player["id"]: player for player in bootstrap["elements"]}
+    fixtures = {fixture["id"]: fixture for fixture in get("fixtures")}
+
+    rows = []
+    for event in bootstrap["events"]:
+        if not event["finished"]:
+            continue
+        for element in get(f"event/{event['id']}/live")["elements"]:
+            player = players.get(element["id"])
+            # No fixture means the player's team had a blank gameweek.
+            if player is None or not element["explain"]:
+                continue
+            fixture = fixtures[element["explain"][0]["fixture"]]
+            rows.append(
+                {
+                    "name": f"{player['first_name']} {player['second_name']}",
+                    "team": teams[player["team"]],
+                    "position": positions[player["element_type"]],
+                    "element": element["id"],
+                    "value": player["now_cost"],
+                    "GW": event["id"],
+                    "kickoff_time": fixture["kickoff_time"],
+                    "was_home": fixture["team_h"] == player["team"],
+                    **{stat: element["stats"][stat] for stat in ROLLING_STATS},
+                }
+            )
+
+    df = pd.DataFrame(rows)
+    df[ROLLING_STATS] = df[ROLLING_STATS].apply(pd.to_numeric)
+    return df
+
+
 def load_season(season: str, use_cache: bool = True) -> pd.DataFrame:
     """Load one season of per-match player data, one row per player per fixture."""
     cache_file = RAW_DIR / f"{season}.csv"
-    if use_cache and cache_file.exists():
+    if season == CURRENT_SEASON:
+        # Never cached on disk, since new gameweeks keep arriving.
+        df = _fetch_current_season()
+    elif use_cache and cache_file.exists():
         df = pd.read_csv(cache_file)
     else:
         df = pd.read_csv(DATA_URL.format(season=season), on_bad_lines="skip")

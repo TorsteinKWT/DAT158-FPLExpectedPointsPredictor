@@ -31,4 +31,4 @@ streamlit run app.py
 - `app.py` – Streamlit-app som viser prediksjoner
 - `notebooks/` – utforsking
 
-Data hentes fra [vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League).
+Tidligere sesonger hentes fra [vaastav/Fantasy-Premier-League](https://github.com/vaastav/Fantasy-Premier-League). Inneværende sesong hentes direkte fra det offisielle FPL-API-et, slik at alle ferdigspilte runder er med.
