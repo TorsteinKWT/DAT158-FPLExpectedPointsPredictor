@@ -1,0 +1,671 @@
+GW,element,name,team,position,fixture,Snitt siste kamper,Lineær regresjon,Random forest,Gradient boosting,created_at
+10,1,David Raya Martín,Arsenal,GK,Hull City (H),5.0,3.761,4.48,4.516,2026-11-04T12:41:07+00:00
+10,2,Kepa Arrizabalaga Revuelta,Arsenal,GK,Hull City (H),0.0,0.46,0.156,0.129,2026-11-04T12:41:07+00:00
+10,3,Illan Meslier,Arsenal,GK,Hull City (H),0.0,0.46,0.156,0.129,2026-11-04T12:41:07+00:00
+10,4,Gabriel dos Santos Magalhães,Arsenal,DEF,Hull City (H),6.8,4.807,5.452,7.039,2026-11-04T12:41:07+00:00
+10,5,Jurriën Timber,Arsenal,DEF,Hull City (H),1.4,2.303,2.205,2.015,2026-11-04T12:41:07+00:00
+10,6,William Saliba,Arsenal,DEF,Hull City (H),0.0,0.68,0.439,0.25,2026-11-04T12:41:07+00:00
+10,7,Myles Lewis-Skelly,Arsenal,MID,Hull City (H),0.8,1.394,1.71,1.704,2026-11-04T12:41:07+00:00
+10,8,Riccardo Calafiori,Arsenal,DEF,Hull City (H),4.6,3.726,3.639,3.552,2026-11-04T12:41:07+00:00
+10,9,Piero Hincapié,Arsenal,DEF,Hull City (H),0.4,0.71,0.903,0.754,2026-11-04T12:41:07+00:00
+10,10,Benjamin White,Arsenal,DEF,Hull City (H),4.2,2.168,2.354,2.137,2026-11-04T12:41:07+00:00
+10,11,Cristhian Mosquera,Arsenal,DEF,Hull City (H),0.0,0.489,0.247,0.167,2026-11-04T12:41:07+00:00
+10,12,Bukayo Saka,Arsenal,MID,Hull City (H),1.4,3.462,3.347,3.851,2026-11-04T12:41:07+00:00
+10,13,Declan Rice,Arsenal,MID,Hull City (H),5.6,4.544,5.813,6.195,2026-11-04T12:41:07+00:00
+10,14,Eberechi Eze,Arsenal,MID,Hull City (H),1.0,1.464,2.091,1.751,2026-11-04T12:41:07+00:00
+10,15,Martin Ødegaard,Arsenal,MID,Hull City (H),2.4,3.854,3.983,3.547,2026-11-04T12:41:07+00:00
+10,16,Noni Madueke,Arsenal,MID,Hull City (H),2.4,3.451,3.57,3.058,2026-11-04T12:41:07+00:00
+10,17,Mikel Merino Zazón,Arsenal,MID,Hull City (H),1.4,1.773,2.339,1.927,2026-11-04T12:41:07+00:00
+10,18,Gabriel Martinelli Silva,Arsenal,MID,Hull City (H),0.0,0.706,0.089,0.163,2026-11-04T12:41:07+00:00
+10,19,Martín Zubimendi Ibáñez,Arsenal,MID,Hull City (H),0.4,0.954,0.829,1.046,2026-11-04T12:41:07+00:00
+10,20,Max Dowman,Arsenal,MID,Hull City (H),0.4,0.745,1.062,0.794,2026-11-04T12:41:07+00:00
+10,21,Christian Nørgaard,Everton,MID,Coventry City (H),0.0,0.411,0.436,0.348,2026-11-04T12:41:07+00:00
+10,22,Ethan Nwaneri,Arsenal,MID,Hull City (H),0.0,0.491,0.095,0.142,2026-11-04T12:41:07+00:00
+10,23,Fábio Ferreira Vieira,Arsenal,MID,Hull City (H),0.0,0.515,0.097,0.145,2026-11-04T12:41:07+00:00
+10,24,Reiss Nelson,Arsenal,MID,Hull City (H),0.0,0.515,0.097,0.145,2026-11-04T12:41:07+00:00
+10,25,Viktor Gyökeres,Arsenal,FWD,Hull City (H),1.8,2.323,2.158,2.103,2026-11-04T12:41:07+00:00
+10,26,Kai Havertz,Arsenal,FWD,Hull City (H),3.2,3.362,3.763,3.576,2026-11-04T12:41:07+00:00
+10,27,Gabriel Fernando de Jesus,Arsenal,FWD,Hull City (H),0.0,0.616,0.105,0.192,2026-11-04T12:41:07+00:00
+10,28,Emiliano Martínez Romero,Chelsea,GK,Sunderland (B),2.6,1.835,1.933,1.845,2026-11-04T12:41:07+00:00
+10,29,Marco Bizot,Aston Villa,GK,Man Utd (B),0.0,0.19,0.201,0.071,2026-11-04T12:41:07+00:00
+10,30,Lucas Digne,Aston Villa,DEF,Man Utd (B),0.0,0.171,0.061,0.071,2026-11-04T12:41:07+00:00
+10,31,Ezri Konsa Ngoyo,Arsenal,DEF,Hull City (H),7.6,3.97,3.881,4.254,2026-11-04T12:41:07+00:00
+10,32,Matty Cash,Aston Villa,DEF,Man Utd (B),2.2,2.907,1.843,1.791,2026-11-04T12:41:07+00:00
+10,33,Tyrone Mings,Aston Villa,DEF,Man Utd (B),2.2,1.924,1.493,1.564,2026-11-04T12:41:07+00:00
+10,34,Pau Torres,Aston Villa,DEF,Man Utd (B),1.0,1.398,1.116,1.474,2026-11-04T12:41:07+00:00
+10,35,Lamare Bogarde,Aston Villa,MID,Man Utd (B),0.0,0.198,0.05,0.088,2026-11-04T12:41:07+00:00
+10,36,Ian Maatsen,Aston Villa,DEF,Man Utd (B),0.8,1.212,1.539,1.45,2026-11-04T12:41:07+00:00
+10,37,Victor Lindelöf,Aston Villa,DEF,Man Utd (B),3.4,3.005,2.648,2.778,2026-11-04T12:41:07+00:00
+10,38,Andrés García,Aston Villa,DEF,Man Utd (B),0.0,0.052,0.009,0.049,2026-11-04T12:41:07+00:00
+10,39,Kosta Nedeljkovic,Aston Villa,DEF,Man Utd (B),0.0,0.052,0.009,0.049,2026-11-04T12:41:07+00:00
+10,40,Morgan Rogers,Chelsea,MID,Sunderland (B),4.6,4.223,3.723,4.621,2026-11-04T12:41:07+00:00
+10,41,Emiliano Buendía Stati,Aston Villa,MID,Man Utd (B),4.0,2.607,3.182,3.072,2026-11-04T12:41:07+00:00
+10,42,Evann Guessand,Crystal Palace,MID,Liverpool (H),0.0,0.137,0.148,0.142,2026-11-04T12:41:07+00:00
+10,43,Youri Tielemans,Man Utd,MID,Aston Villa (H),2.8,1.971,2.364,1.953,2026-11-04T12:41:07+00:00
+10,44,Leon Bailey,Aston Villa,MID,Man Utd (B),0.0,0.317,0.07,0.142,2026-11-04T12:41:07+00:00
+10,45,John McGinn,Aston Villa,MID,Man Utd (B),4.6,3.383,3.068,3.306,2026-11-04T12:41:07+00:00
+10,46,Ross Barkley,Aston Villa,MID,Man Utd (B),1.0,1.016,1.504,1.395,2026-11-04T12:41:07+00:00
+10,47,Boubacar Kamara,Aston Villa,MID,Man Utd (B),4.2,2.901,3.04,3.004,2026-11-04T12:41:07+00:00
+10,48,Amadou Onana,Aston Villa,MID,Man Utd (B),0.0,0.198,0.05,0.088,2026-11-04T12:41:07+00:00
+10,49,Samuel Iling-Junior,Aston Villa,MID,Man Utd (B),0.0,0.222,0.052,0.088,2026-11-04T12:41:07+00:00
+10,50,Bradley Burrowes,Aston Villa,MID,Man Utd (B),0.0,0.078,0.016,0.052,2026-11-04T12:41:07+00:00
+10,51,George Hemmings,Aston Villa,MID,Man Utd (B),0.2,0.276,0.259,0.448,2026-11-04T12:41:07+00:00
+10,52,Alysson Edward Franco da Rocha dos Santos,Aston Villa,MID,Man Utd (B),0.8,0.695,1.28,1.361,2026-11-04T12:41:07+00:00
+10,53,Johan Manzambi,Aston Villa,MID,Man Utd (B),7.4,3.358,3.033,3.163,2026-11-04T12:41:07+00:00
+10,54,Joao Gomes,Aston Villa,MID,Man Utd (B),2.8,2.584,2.725,2.616,2026-11-04T12:41:07+00:00
+10,55,Ollie Watkins,Aston Villa,FWD,Man Utd (B),0.0,0.895,0.065,0.074,2026-11-04T12:41:07+00:00
+10,56,Tammy Abraham,Aston Villa,FWD,Man Utd (B),0.2,0.377,0.475,0.313,2026-11-04T12:41:07+00:00
+10,57,Đorđe Petrović,Bournemouth,GK,Ipswich Town (B),4.2,3.294,3.837,4.043,2026-11-04T12:41:07+00:00
+10,58,Fraser Forster,Bournemouth,GK,Ipswich Town (B),0.0,0.231,0.049,0.049,2026-11-04T12:41:07+00:00
+10,59,Will Dennis,Bournemouth,GK,Ipswich Town (B),0.0,0.231,0.049,0.049,2026-11-04T12:41:07+00:00
+10,60,James Hill,Bournemouth,DEF,Ipswich Town (B),6.0,3.81,4.109,4.415,2026-11-04T12:41:07+00:00
+10,61,Adrien Truffert,Bournemouth,DEF,Ipswich Town (B),4.6,3.787,3.878,4.592,2026-11-04T12:41:07+00:00
+10,62,Bafodé Diakité,Bournemouth,DEF,Ipswich Town (B),0.6,0.551,0.844,0.544,2026-11-04T12:41:07+00:00
+10,63,Veljko Milosavljevic,Bournemouth,DEF,Ipswich Town (B),0.0,0.428,0.071,0.129,2026-11-04T12:41:07+00:00
+10,64,Adam Smith,Bournemouth,DEF,Ipswich Town (B),4.0,3.116,3.074,3.621,2026-11-04T12:41:07+00:00
+10,65,Julián Araujo Zúñiga,Bournemouth,DEF,Ipswich Town (B),0.0,0.308,0.042,0.092,2026-11-04T12:41:07+00:00
+10,66,Julio Soler Barreto,Bournemouth,DEF,Ipswich Town (B),0.2,0.299,0.343,0.384,2026-11-04T12:41:07+00:00
+10,67,Rayan Vitor Simplício Rocha,Bournemouth,MID,Ipswich Town (B),4.0,4.187,3.837,3.731,2026-11-04T12:41:07+00:00
+10,68,Marcus Tavernier,Bournemouth,MID,Ipswich Town (B),5.2,3.912,3.993,3.92,2026-11-04T12:41:07+00:00
+10,69,Alex Scott,Bournemouth,MID,Ipswich Town (B),0.4,1.148,1.71,1.592,2026-11-04T12:41:07+00:00
+10,70,Justin Kluivert,Bournemouth,MID,Ipswich Town (B),2.6,1.89,2.015,2.346,2026-11-04T12:41:07+00:00
+10,71,Lewis Cook,Bournemouth,MID,Ipswich Town (B),2.2,1.883,1.592,1.782,2026-11-04T12:41:07+00:00
+10,72,Ben Gannon-Doak,Bournemouth,MID,Ipswich Town (B),0.8,1.285,1.135,1.314,2026-11-04T12:41:07+00:00
+10,73,Tyler Adams,Bournemouth,MID,Ipswich Town (B),2.8,3.229,2.939,3.402,2026-11-04T12:41:07+00:00
+10,74,David Brooks,Bournemouth,MID,Ipswich Town (B),0.4,0.631,1.154,0.931,2026-11-04T12:41:07+00:00
+10,75,Ryan Christie,Bournemouth,MID,Ipswich Town (B),2.4,2.564,2.963,2.602,2026-11-04T12:41:07+00:00
+10,76,Alex Tóth,Bournemouth,MID,Ipswich Town (B),0.2,0.395,0.293,0.236,2026-11-04T12:41:07+00:00
+10,77,Amine Adli,Bournemouth,MID,Ipswich Town (B),2.0,0.852,1.277,1.502,2026-11-04T12:41:07+00:00
+10,78,Junior Kroupi,Bournemouth,MID,Ipswich Town (B),1.0,1.399,1.777,1.554,2026-11-04T12:41:07+00:00
+10,79,Francisco Evanilson de Lima Barbosa,Bournemouth,FWD,Ipswich Town (B),7.2,4.313,4.167,3.627,2026-11-04T12:41:07+00:00
+10,80,Enes Ünal,Bournemouth,FWD,Ipswich Town (B),0.0,0.507,0.077,0.174,2026-11-04T12:41:07+00:00
+10,81,Álvaro Rodríguez,Bournemouth,FWD,Ipswich Town (B),0.6,1.213,1.461,1.16,2026-11-04T12:41:07+00:00
+10,82,Caoimhín Kelleher,Brentford,GK,Brighton (B),3.8,2.957,3.104,2.833,2026-11-04T12:41:07+00:00
+10,83,Hákon Rafn Valdimarsson,Brentford,GK,Brighton (B),0.0,0.039,0.114,0.071,2026-11-04T12:41:07+00:00
+10,84,Nathan Collins,Brentford,DEF,Brighton (B),0.0,0.259,0.1,0.161,2026-11-04T12:41:07+00:00
+10,85,Sepp van den Berg,Brentford,DEF,Brighton (B),2.6,1.742,1.628,1.665,2026-11-04T12:41:07+00:00
+10,86,Keane Lewis-Potter,Brentford,MID,Brighton (B),3.8,2.523,2.827,2.594,2026-11-04T12:41:07+00:00
+10,87,Kristoffer Ajer,Brentford,DEF,Brighton (B),5.2,3.178,2.376,2.33,2026-11-04T12:41:07+00:00
+10,88,Michael Kayode,Brentford,DEF,Brighton (B),3.2,2.713,2.577,2.093,2026-11-04T12:41:07+00:00
+10,89,Rico Henry,Brentford,DEF,Brighton (B),0.0,0.02,0.124,0.071,2026-11-04T12:41:07+00:00
+10,90,Aaron Hickey,Brentford,DEF,Brighton (B),1.0,1.576,1.239,1.26,2026-11-04T12:41:07+00:00
+10,91,Ethan Pinnock,Coventry City,DEF,Everton (B),3.8,3.221,2.98,3.128,2026-11-04T12:41:07+00:00
+10,92,Kim Ji-soo,Brentford,DEF,Brighton (B),0.0,0.02,0.124,0.071,2026-11-04T12:41:07+00:00
+10,93,Jannik Schuster,Brentford,DEF,Brighton (B),3.0,1.095,1.318,1.306,2026-11-04T12:41:07+00:00
+10,94,Kevin Schade,Brentford,MID,Brighton (B),3.0,2.578,2.367,2.502,2026-11-04T12:41:07+00:00
+10,95,Dango Ouattara,Brentford,MID,Brighton (B),3.8,2.158,1.79,2.205,2026-11-04T12:41:07+00:00
+10,96,Mikkel Damsgaard,Brentford,MID,Brighton (B),1.2,1.717,1.479,1.621,2026-11-04T12:41:07+00:00
+10,97,Mathias Jensen,Brentford,MID,Brighton (B),1.4,1.278,1.676,1.42,2026-11-04T12:41:07+00:00
+10,98,Vitaly Janelt,Brentford,MID,Brighton (B),2.0,2.31,1.785,1.648,2026-11-04T12:41:07+00:00
+10,99,Antoni Milambo,Brentford,MID,Brighton (B),0.0,0.094,0.046,0.088,2026-11-04T12:41:07+00:00
+10,100,Fábio Freitas Gouveia Carvalho,Brentford,MID,Brighton (B),1.2,0.354,1.018,1.092,2026-11-04T12:41:07+00:00
+10,101,Jordan Henderson,Chelsea,MID,Sunderland (B),5.0,3.034,3.37,3.16,2026-11-04T12:41:07+00:00
+10,102,Yehor Yarmoliuk,Brentford,MID,Brighton (B),1.8,0.831,1.234,1.174,2026-11-04T12:41:07+00:00
+10,103,Josh Dasilva,Brentford,MID,Brighton (B),0.0,0.047,0.073,0.088,2026-11-04T12:41:07+00:00
+10,104,Frank Onyeka,Coventry City,MID,Everton (B),1.2,1.578,1.488,1.497,2026-11-04T12:41:07+00:00
+10,105,Jaidon Anthony,Brentford,MID,Brighton (B),4.4,2.848,2.447,2.33,2026-11-04T12:41:07+00:00
+10,106,Igor Thiago Nascimento Rodrigues,Brentford,FWD,Brighton (B),5.4,4.544,3.694,3.958,2026-11-04T12:41:07+00:00
+10,107,Kaye Furo,Brentford,FWD,Brighton (B),0.0,-0.044,0.021,0.06,2026-11-04T12:41:07+00:00
+10,108,Callum Wilson,Brentford,FWD,Brighton (B),0.4,0.541,0.869,0.745,2026-11-04T12:41:07+00:00
+10,109,Bart Verbruggen,Brighton,GK,Brentford (H),6.8,3.387,3.119,3.367,2026-11-04T12:41:07+00:00
+10,110,Carl Rushworth,Coventry City,GK,Everton (B),3.8,3.091,2.953,2.996,2026-11-04T12:41:07+00:00
+10,111,Jason Steele,Brighton,GK,Brentford (H),0.0,0.08,0.013,0.049,2026-11-04T12:41:07+00:00
+10,112,Jan Paul van Hecke,Spurs,DEF,Leeds (B),7.0,4.326,3.598,3.137,2026-11-04T12:41:07+00:00
+10,113,Ferdi Kadıoğlu,Brighton,DEF,Brentford (H),4.2,1.586,2.311,1.862,2026-11-04T12:41:07+00:00
+10,114,Olivier Boscagli,Brighton,DEF,Brentford (H),5.2,2.202,2.407,2.275,2026-11-04T12:41:07+00:00
+10,115,Maxim De Cuyper,Brighton,DEF,Brentford (H),7.4,3.649,3.259,3.346,2026-11-04T12:41:07+00:00
+10,116,Lewis Dunk,Brighton,DEF,Brentford (H),2.8,2.229,1.975,1.985,2026-11-04T12:41:07+00:00
+10,117,Diego Coppola,Brighton,DEF,Brentford (H),0.0,0.181,0.135,0.071,2026-11-04T12:41:07+00:00
+10,118,Igor Julio dos Santos de Paulo,Brighton,DEF,Brentford (H),0.0,0.181,0.135,0.071,2026-11-04T12:41:07+00:00
+10,119,João Pedro Loureiro da Costa,Brighton,DEF,Brentford (H),2.0,2.329,1.877,1.574,2026-11-04T12:41:07+00:00
+10,120,Michael Svoboda,Brighton,DEF,Brentford (H),0.4,0.392,0.824,0.558,2026-11-04T12:41:07+00:00
+10,121,Mitoma Kaoru,Brighton,MID,Brentford (H),0.0,0.446,0.132,0.163,2026-11-04T12:41:07+00:00
+10,122,Yankuba Minteh,Brighton,MID,Brentford (H),0.0,0.422,0.131,0.163,2026-11-04T12:41:07+00:00
+10,123,Jack Hinshelwood,Brighton,MID,Brentford (H),1.6,1.752,1.458,1.676,2026-11-04T12:41:07+00:00
+10,124,Pascal Groß,Brighton,MID,Brentford (H),5.4,3.864,3.71,3.972,2026-11-04T12:41:07+00:00
+10,125,Georginio Rutter,Brighton,FWD,Brentford (H),1.6,1.291,1.816,1.604,2026-11-04T12:41:07+00:00
+10,126,Matt O'Riley,Brighton,MID,Brentford (H),0.2,0.458,0.808,0.625,2026-11-04T12:41:07+00:00
+10,127,Diego Gómez Amarilla,Brighton,MID,Brentford (H),5.2,3.426,3.07,3.151,2026-11-04T12:41:07+00:00
+10,128,Facundo Buonanotte,Brighton,MID,Brentford (H),0.0,0.231,0.043,0.088,2026-11-04T12:41:07+00:00
+10,129,Yasin Ayari,Brighton,MID,Brentford (H),6.2,3.554,3.068,3.235,2026-11-04T12:41:07+00:00
+10,130,Mats Wieffer,Brighton,DEF,Brentford (H),0.2,0.554,0.449,0.539,2026-11-04T12:41:07+00:00
+10,131,Carlos Baleba,Man Utd,MID,Aston Villa (H),1.6,1.407,1.531,1.709,2026-11-04T12:41:07+00:00
+10,132,Harry Howell,Brighton,MID,Brentford (H),0.0,0.112,0.013,0.052,2026-11-04T12:41:07+00:00
+10,133,Tom Watson,Brighton,MID,Brentford (H),0.0,0.231,0.043,0.088,2026-11-04T12:41:07+00:00
+10,134,Nehemiah Oriola,Brighton,MID,Brentford (H),0.0,0.088,0.018,0.052,2026-11-04T12:41:07+00:00
+10,135,Zadok Yohanna,Brighton,MID,Brentford (H),0.0,0.183,0.05,0.088,2026-11-04T12:41:07+00:00
+10,136,Danny Welbeck,Chelsea,FWD,Sunderland (B),1.2,1.013,1.547,1.258,2026-11-04T12:41:07+00:00
+10,137,Stefanos Tzimas,Brighton,FWD,Brentford (H),0.0,0.332,0.122,0.15,2026-11-04T12:41:07+00:00
+10,138,Charalampos Kostoulas,Brighton,FWD,Brentford (H),5.4,2.844,3.567,3.608,2026-11-04T12:41:07+00:00
+10,139,Evan Ferguson,Brighton,FWD,Brentford (H),0.0,0.212,0.023,0.096,2026-11-04T12:41:07+00:00
+10,140,Robert Lynch Sánchez,Chelsea,GK,Sunderland (B),0.0,0.306,0.13,0.109,2026-11-04T12:41:07+00:00
+10,141,Filip Jörgensen,Chelsea,GK,Sunderland (B),0.0,0.33,0.139,0.109,2026-11-04T12:41:07+00:00
+10,142,Reece James,Chelsea,DEF,Sunderland (B),0.0,0.359,0.23,0.162,2026-11-04T12:41:07+00:00
+10,143,Trevoh Chalobah,Chelsea,DEF,Sunderland (B),0.0,0.431,0.306,0.184,2026-11-04T12:41:07+00:00
+10,144,Malo Gusto,Chelsea,DEF,Sunderland (B),0.4,0.399,0.706,0.594,2026-11-04T12:41:07+00:00
+10,145,Wesley Fofana,Chelsea,DEF,Sunderland (B),3.0,1.411,1.613,1.792,2026-11-04T12:41:07+00:00
+10,146,Benoît Badiashile Mukinayi,Chelsea,DEF,Sunderland (B),0.0,0.192,0.068,0.072,2026-11-04T12:41:07+00:00
+10,147,Tosin Adarabioyo,Spurs,DEF,Leeds (B),0.4,0.483,0.796,0.692,2026-11-04T12:41:07+00:00
+10,148,Jorrel Hato,Chelsea,DEF,Sunderland (B),3.4,1.315,1.422,1.439,2026-11-04T12:41:07+00:00
+10,149,Levi Samuels Colwill,Chelsea,DEF,Sunderland (B),3.6,3.185,3.632,3.666,2026-11-04T12:41:07+00:00
+10,150,Mamadou Sarr,Chelsea,DEF,Sunderland (B),0.0,0.192,0.068,0.072,2026-11-04T12:41:07+00:00
+10,151,Josh Acheampong,Chelsea,DEF,Sunderland (B),3.8,2.781,2.615,2.554,2026-11-04T12:41:07+00:00
+10,152,Marco Palestra,Chelsea,DEF,Sunderland (B),1.6,1.354,1.208,1.293,2026-11-04T12:41:07+00:00
+10,153,Axel Disasi,Crystal Palace,DEF,Liverpool (H),1.2,1.165,1.447,1.232,2026-11-04T12:41:07+00:00
+10,154,Cole Palmer,Chelsea,MID,Sunderland (B),3.8,4.478,3.89,3.809,2026-11-04T12:41:07+00:00
+10,155,Enzo Fernández,Man City,MID,Nott'm Forest (B),3.0,3.533,4.028,4.236,2026-11-04T12:41:07+00:00
+10,156,Pedro Lomba Neto,Chelsea,MID,Sunderland (B),5.6,3.974,3.55,3.217,2026-11-04T12:41:07+00:00
+10,157,Estêvão Almeida de Oliveira Gonçalves,Chelsea,MID,Sunderland (B),1.2,1.641,2.166,2.015,2026-11-04T12:41:07+00:00
+10,158,Jamie Bynoe-Gittens,Chelsea,MID,Sunderland (B),0.0,0.433,0.224,0.163,2026-11-04T12:41:07+00:00
+10,159,Moisés Caicedo Corozo,Chelsea,MID,Sunderland (B),2.0,2.212,2.611,2.229,2026-11-04T12:41:07+00:00
+10,160,Alejandro Garnacho Ferreyra,Aston Villa,MID,Man Utd (B),0.2,0.484,0.41,0.56,2026-11-04T12:41:07+00:00
+10,161,Roméo Lavia,Chelsea,MID,Sunderland (B),2.0,1.146,1.605,1.209,2026-11-04T12:41:07+00:00
+10,162,Andrey Nascimento dos Santos,Man Utd,MID,Aston Villa (H),1.2,1.398,1.757,1.685,2026-11-04T12:41:07+00:00
+10,163,Dário Luís Essugo,Chelsea,MID,Sunderland (B),0.0,0.123,0.015,0.052,2026-11-04T12:41:07+00:00
+10,164,Geovany Quenda,Chelsea,MID,Sunderland (B),1.2,0.925,1.083,1.289,2026-11-04T12:41:07+00:00
+10,165,João Pedro Junqueira de Jesus,Chelsea,FWD,Sunderland (B),2.8,2.193,2.829,2.761,2026-11-04T12:41:07+00:00
+10,166,Nicolas Jackson,Aston Villa,FWD,Man Utd (B),7.8,4.323,3.568,3.192,2026-11-04T12:41:07+00:00
+10,167,Liam Delap,Nott'm Forest,FWD,Man City (H),1.8,2.957,2.75,2.542,2026-11-04T12:41:07+00:00
+10,168,Marc Guiu Paz,Chelsea,FWD,Sunderland (B),0.0,0.247,0.029,0.098,2026-11-04T12:41:07+00:00
+10,169,Shumaira Mheuka,Chelsea,FWD,Sunderland (B),0.0,0.128,0.015,0.061,2026-11-04T12:41:07+00:00
+10,170,Emmanuel Emegha,Chelsea,FWD,Sunderland (B),0.0,0.224,0.023,0.098,2026-11-04T12:41:07+00:00
+10,171,Oliver Dovin,Coventry City,GK,Everton (B),0.0,0.083,0.009,0.049,2026-11-04T12:41:07+00:00
+10,172,Ben Wilson,Coventry City,GK,Everton (B),0.0,0.178,0.068,0.071,2026-11-04T12:41:07+00:00
+10,173,Bobby Thomas,Coventry City,DEF,Everton (B),3.4,2.172,2.681,2.596,2026-11-04T12:41:07+00:00
+10,174,Liam Kitching,Coventry City,DEF,Everton (B),0.0,0.064,0.016,0.049,2026-11-04T12:41:07+00:00
+10,175,Milan van Ewijk,Coventry City,DEF,Everton (B),2.6,2.398,1.947,2.024,2026-11-04T12:41:07+00:00
+10,176,Jay Dasilva,Coventry City,DEF,Everton (B),4.8,3.331,3.111,3.843,2026-11-04T12:41:07+00:00
+10,177,Kaine Kesler-Hayden,Coventry City,DEF,Everton (B),0.2,0.1,0.232,0.336,2026-11-04T12:41:07+00:00
+10,178,Jake Bidwell,Coventry City,DEF,Everton (B),0.0,0.064,0.016,0.049,2026-11-04T12:41:07+00:00
+10,179,Joel Latibeaudiere,Coventry City,DEF,Everton (B),0.2,0.078,0.27,0.295,2026-11-04T12:41:07+00:00
+10,180,Luke Woolfenden,Coventry City,DEF,Everton (B),0.0,0.04,0.015,0.049,2026-11-04T12:41:07+00:00
+10,181,Miguel Brau,Coventry City,DEF,Everton (B),0.0,0.064,0.016,0.049,2026-11-04T12:41:07+00:00
+10,182,Aurèle Amenda,Coventry City,DEF,Everton (B),0.0,0.04,0.015,0.049,2026-11-04T12:41:07+00:00
+10,183,Jack Rudoni,Coventry City,MID,Everton (B),5.8,3.466,3.334,3.434,2026-11-04T12:41:07+00:00
+10,184,Matt Grimes,Coventry City,MID,Everton (B),2.0,2.384,2.153,2.161,2026-11-04T12:41:07+00:00
+10,185,Tatsuhiro Sakamoto,Coventry City,MID,Everton (B),2.2,2.081,2.073,2.169,2026-11-04T12:41:07+00:00
+10,186,Ephron Mason-Clark,Coventry City,MID,Everton (B),1.2,1.111,1.408,1.523,2026-11-04T12:41:07+00:00
+10,187,Josh Eccles,Coventry City,MID,Everton (B),0.0,0.186,0.054,0.088,2026-11-04T12:41:07+00:00
+10,188,Victor Torp,Coventry City,MID,Everton (B),1.0,0.938,1.262,1.461,2026-11-04T12:41:07+00:00
+10,189,George Shepherd,Coventry City,MID,Everton (B),0.0,0.091,0.015,0.052,2026-11-04T12:41:07+00:00
+10,190,Loum Tchaouna,Coventry City,MID,Everton (B),0.2,0.829,0.882,0.96,2026-11-04T12:41:07+00:00
+10,191,Raphael Borges Rodrigues,Coventry City,MID,Everton (B),0.0,0.114,0.013,0.052,2026-11-04T12:41:07+00:00
+10,192,Kai Andrews,Coventry City,MID,Everton (B),0.0,0.114,0.013,0.052,2026-11-04T12:41:07+00:00
+10,193,Haji Wright,Coventry City,FWD,Everton (B),0.0,0.31,0.167,0.15,2026-11-04T12:41:07+00:00
+10,194,Brandon Thomas-Asante,Coventry City,FWD,Everton (B),3.4,2.468,3.096,3.341,2026-11-04T12:41:07+00:00
+10,195,Ellis Simms,Coventry City,FWD,Everton (B),1.4,0.672,1.047,1.183,2026-11-04T12:41:07+00:00
+10,196,Jahnoah Markelo,Coventry City,FWD,Everton (B),0.0,0.239,0.018,0.096,2026-11-04T12:41:07+00:00
+10,197,Norman Bassette,Coventry City,FWD,Everton (B),0.0,0.12,0.013,0.06,2026-11-04T12:41:07+00:00
+10,198,Dean Henderson,Crystal Palace,GK,Liverpool (H),0.6,0.573,1.262,1.065,2026-11-04T12:41:07+00:00
+10,199,Walter Benítez,Crystal Palace,GK,Liverpool (H),2.2,2.123,1.39,1.668,2026-11-04T12:41:07+00:00
+10,200,Maxence Lacroix,Chelsea,DEF,Sunderland (B),2.8,2.888,3.053,2.994,2026-11-04T12:41:07+00:00
+10,201,Daniel Muñoz Mejía,Nott'm Forest,DEF,Man City (H),2.4,3.256,2.66,2.488,2026-11-04T12:41:07+00:00
+10,202,Chris Richards,Crystal Palace,DEF,Liverpool (H),4.0,3.017,2.865,2.58,2026-11-04T12:41:07+00:00
+10,203,Jaydee Canvot,Crystal Palace,DEF,Liverpool (H),2.6,2.774,2.75,2.458,2026-11-04T12:41:07+00:00
+10,204,Tyrick Mitchell,Crystal Palace,DEF,Liverpool (H),3.0,2.708,2.332,2.064,2026-11-04T12:41:07+00:00
+10,205,Borna Sosa,Crystal Palace,DEF,Liverpool (H),0.0,0.015,0.071,0.071,2026-11-04T12:41:07+00:00
+10,206,Chadi Riad Dnanou,Crystal Palace,DEF,Liverpool (H),0.0,-0.032,0.097,0.071,2026-11-04T12:41:07+00:00
+10,207,Oscar Mingueza,Crystal Palace,DEF,Liverpool (H),0.0,0.116,0.417,0.638,2026-11-04T12:41:07+00:00
+10,208,Ismaïla Sarr,Crystal Palace,MID,Liverpool (H),0.4,0.565,0.761,0.754,2026-11-04T12:41:07+00:00
+10,209,Brennan Johnson,Everton,MID,Coventry City (H),1.6,1.842,1.918,2.094,2026-11-04T12:41:07+00:00
+10,210,Adam Wharton,Crystal Palace,MID,Liverpool (H),3.4,3.135,3.26,3.026,2026-11-04T12:41:07+00:00
+10,211,Yéremy Pino Santos,Crystal Palace,MID,Liverpool (H),3.0,2.354,2.919,2.627,2026-11-04T12:41:07+00:00
+10,212,Will Hughes,Crystal Palace,MID,Liverpool (H),0.4,0.013,0.323,0.511,2026-11-04T12:41:07+00:00
+10,213,Jefferson Lerma Solís,Crystal Palace,MID,Liverpool (H),2.0,1.554,2.179,1.691,2026-11-04T12:41:07+00:00
+10,214,Daichi Kamada,Crystal Palace,MID,Liverpool (H),3.2,2.817,2.533,2.443,2026-11-04T12:41:07+00:00
+10,215,Justin Devenny,Crystal Palace,MID,Liverpool (H),0.0,0.066,0.049,0.088,2026-11-04T12:41:07+00:00
+10,216,Romain Esse,Crystal Palace,MID,Liverpool (H),0.0,0.066,0.049,0.088,2026-11-04T12:41:07+00:00
+10,217,Matheus França de Oliveira,Crystal Palace,MID,Liverpool (H),0.0,0.042,0.05,0.088,2026-11-04T12:41:07+00:00
+10,218,Cheick Doucouré,Crystal Palace,MID,Liverpool (H),0.0,0.018,0.061,0.088,2026-11-04T12:41:07+00:00
+10,219,Jesurun Rak-Sakyi,Crystal Palace,MID,Liverpool (H),0.0,0.042,0.05,0.088,2026-11-04T12:41:07+00:00
+10,220,Rio Cardines,Crystal Palace,DEF,Liverpool (H),0.0,0.015,0.071,0.071,2026-11-04T12:41:07+00:00
+10,221,Joél Drakes-Thomas,Crystal Palace,MID,Liverpool (H),0.0,-0.077,0.016,0.052,2026-11-04T12:41:07+00:00
+10,222,Jørgen Strand Larsen,Crystal Palace,FWD,Liverpool (H),1.8,1.757,2.143,2.0,2026-11-04T12:41:07+00:00
+10,223,Jean-Philippe Mateta,Crystal Palace,FWD,Liverpool (H),0.2,0.813,1.651,1.431,2026-11-04T12:41:07+00:00
+10,224,Eddie Nketiah,Crystal Palace,FWD,Liverpool (H),1.0,1.365,1.266,1.225,2026-11-04T12:41:07+00:00
+10,225,Christantus Uche,Crystal Palace,FWD,Liverpool (H),0.0,0.071,0.029,0.096,2026-11-04T12:41:07+00:00
+10,226,Jordan Pickford,Everton,GK,Coventry City (H),3.8,3.363,4.157,4.594,2026-11-04T12:41:07+00:00
+10,227,Mark Travers,Everton,GK,Coventry City (H),0.0,0.499,0.354,0.129,2026-11-04T12:41:07+00:00
+10,228,Tom King,Everton,GK,Coventry City (H),0.0,0.379,0.154,0.092,2026-11-04T12:41:07+00:00
+10,229,James Tarkowski,Everton,DEF,Coventry City (H),5.0,3.753,4.7,5.199,2026-11-04T12:41:07+00:00
+10,230,Jarrad Branthwaite,Everton,DEF,Coventry City (H),4.2,3.036,3.275,4.129,2026-11-04T12:41:07+00:00
+10,231,Michael Keane,Everton,DEF,Coventry City (H),0.4,1.016,1.081,1.102,2026-11-04T12:41:07+00:00
+10,232,Jake O'Brien,Everton,DEF,Coventry City (H),2.2,1.92,1.852,2.04,2026-11-04T12:41:07+00:00
+10,233,Vitalii Mykolenko,Everton,DEF,Coventry City (H),2.4,2.407,2.347,3.371,2026-11-04T12:41:07+00:00
+10,234,Nathan Patterson,Everton,DEF,Coventry City (H),0.0,0.361,0.152,0.092,2026-11-04T12:41:07+00:00
+10,235,Adam Aznou,Everton,DEF,Coventry City (H),0.0,0.242,0.075,0.049,2026-11-04T12:41:07+00:00
+10,236,Kiernan Dewsbury-Hall,Everton,MID,Coventry City (H),4.8,4.083,4.144,5.255,2026-11-04T12:41:07+00:00
+10,237,Iliman Ndiaye,Man City,MID,Nott'm Forest (B),3.6,2.852,3.738,3.671,2026-11-04T12:41:07+00:00
+10,238,Jack Grealish,Everton,MID,Coventry City (H),1.4,2.33,2.674,2.588,2026-11-04T12:41:07+00:00
+10,239,James Garner,Everton,MID,Coventry City (H),3.0,3.631,3.877,4.491,2026-11-04T12:41:07+00:00
+10,240,Tim Iroegbunam,Hull City,MID,Arsenal (B),4.0,2.379,2.112,1.88,2026-11-04T12:41:07+00:00
+10,241,Dwight McNeil,Crystal Palace,MID,Liverpool (H),1.2,1.291,1.662,1.525,2026-11-04T12:41:07+00:00
+10,242,Tyrique George,Everton,MID,Coventry City (H),2.0,2.59,2.323,2.152,2026-11-04T12:41:07+00:00
+10,243,Carlos Alcaraz Durán,Everton,MID,Coventry City (H),0.4,0.518,0.491,0.618,2026-11-04T12:41:07+00:00
+10,244,Harrison Armstrong,Everton,MID,Coventry City (H),2.4,3.167,3.281,3.142,2026-11-04T12:41:07+00:00
+10,245,Tyler Dibling,Everton,MID,Coventry City (H),0.6,1.183,1.313,1.604,2026-11-04T12:41:07+00:00
+10,246,Merlin Röhl,Everton,MID,Coventry City (H),1.4,2.0,1.685,1.685,2026-11-04T12:41:07+00:00
+10,247,Hayden Hackney,Everton,MID,Coventry City (H),0.8,0.919,1.177,1.099,2026-11-04T12:41:07+00:00
+10,248,Norberto Bercique Gomes Betuncal,Everton,FWD,Coventry City (H),0.0,0.512,0.101,0.171,2026-11-04T12:41:07+00:00
+10,249,Thierno Barry,Everton,FWD,Coventry City (H),5.0,4.158,4.096,4.143,2026-11-04T12:41:07+00:00
+10,250,Bernd Leno,Fulham,GK,Newcastle (H),4.2,3.049,3.235,3.163,2026-11-04T12:41:07+00:00
+10,251,Benjamin Lecomte,Fulham,GK,Newcastle (H),0.0,0.09,0.107,0.049,2026-11-04T12:41:07+00:00
+10,252,Alfie McNally,Fulham,GK,Newcastle (H),0.0,0.09,0.107,0.049,2026-11-04T12:41:07+00:00
+10,253,Joachim Andersen,Fulham,DEF,Newcastle (H),0.2,0.451,0.797,0.504,2026-11-04T12:41:07+00:00
+10,254,Antonee Robinson,Fulham,DEF,Newcastle (H),4.0,2.743,2.875,3.431,2026-11-04T12:41:07+00:00
+10,255,Jorge Cuenca Barreno,Fulham,DEF,Newcastle (H),0.0,0.167,0.088,0.071,2026-11-04T12:41:07+00:00
+10,256,Kenny Tete,Fulham,DEF,Newcastle (H),0.6,0.997,1.048,1.083,2026-11-04T12:41:07+00:00
+10,257,Calvin Bassey,Fulham,DEF,Newcastle (H),5.0,3.352,3.042,3.144,2026-11-04T12:41:07+00:00
+10,258,Timothy Castagne,Fulham,DEF,Newcastle (H),3.6,2.722,2.24,2.44,2026-11-04T12:41:07+00:00
+10,259,Issa Diop,Ipswich Town,DEF,Bournemouth (H),2.4,2.697,2.467,2.789,2026-11-04T12:41:07+00:00
+10,260,Harry Wilson,Leeds,MID,Spurs (H),1.2,1.615,1.797,1.766,2026-11-04T12:41:07+00:00
+10,261,Alex Iwobi,Fulham,MID,Newcastle (H),5.8,3.811,3.593,3.379,2026-11-04T12:41:07+00:00
+10,262,Emile Smith Rowe,Fulham,MID,Newcastle (H),0.0,0.318,0.57,0.343,2026-11-04T12:41:07+00:00
+10,263,Kevin Santos Lopes de Macedo,Fulham,MID,Newcastle (H),0.4,0.704,1.114,1.021,2026-11-04T12:41:07+00:00
+10,264,Oscar Bobb,Fulham,MID,Newcastle (H),4.4,3.162,3.335,3.1,2026-11-04T12:41:07+00:00
+10,265,Sander Berge,Fulham,MID,Newcastle (H),2.6,2.684,2.583,2.505,2026-11-04T12:41:07+00:00
+10,266,Tom Cairney,Fulham,MID,Newcastle (H),0.4,0.683,0.898,0.907,2026-11-04T12:41:07+00:00
+10,267,Saša Lukić,Ipswich Town,MID,Bournemouth (H),1.2,1.207,1.621,1.405,2026-11-04T12:41:07+00:00
+10,268,Josh King,Fulham,MID,Newcastle (H),2.8,2.988,3.488,3.042,2026-11-04T12:41:07+00:00
+10,269,Ryan Sessegnon,Fulham,DEF,Newcastle (H),1.0,0.967,1.158,1.29,2026-11-04T12:41:07+00:00
+10,270,Harrison Reed,Fulham,MID,Newcastle (H),0.0,0.074,0.034,0.052,2026-11-04T12:41:07+00:00
+10,271,Rodrigo Muniz Carvalho,Fulham,FWD,Newcastle (H),0.6,0.838,0.994,0.915,2026-11-04T12:41:07+00:00
+10,272,Jonah Kusi-Asare,Fulham,FWD,Newcastle (H),0.0,0.103,0.015,0.06,2026-11-04T12:41:07+00:00
+10,273,Dillon Phillips,Hull City,GK,Arsenal (B),0.0,-0.244,0.008,0.027,2026-11-04T12:41:07+00:00
+10,274,Jack Butland,Hull City,GK,Arsenal (B),0.0,-0.148,0.068,0.049,2026-11-04T12:41:07+00:00
+10,275,Harvey Cartwright,Hull City,GK,Arsenal (B),0.0,-0.244,0.008,0.027,2026-11-04T12:41:07+00:00
+10,276,Thimothée Lo-Tutala,Hull City,GK,Arsenal (B),0.0,-0.244,0.008,0.027,2026-11-04T12:41:07+00:00
+10,277,John Egan,Hull City,DEF,Arsenal (B),2.2,2.008,1.412,1.423,2026-11-04T12:41:07+00:00
+10,278,Charlie Hughes,Hull City,DEF,Arsenal (B),0.0,-0.286,0.03,0.027,2026-11-04T12:41:07+00:00
+10,279,Semi Ajayi,Hull City,DEF,Arsenal (B),2.0,2.476,1.925,1.847,2026-11-04T12:41:07+00:00
+10,280,Lewie Coyle,Hull City,DEF,Arsenal (B),1.4,1.96,1.416,1.369,2026-11-04T12:41:07+00:00
+10,281,Cody Drameh,Hull City,DEF,Arsenal (B),0.0,-0.262,0.025,0.027,2026-11-04T12:41:07+00:00
+10,282,Ryan Giles,Hull City,DEF,Arsenal (B),1.2,1.582,1.319,1.306,2026-11-04T12:41:07+00:00
+10,283,Matty Jacob,Hull City,DEF,Arsenal (B),0.0,-0.262,0.025,0.027,2026-11-04T12:41:07+00:00
+10,284,Cathal McCarthy,Hull City,DEF,Arsenal (B),0.0,-0.262,0.025,0.027,2026-11-04T12:41:07+00:00
+10,285,Paddy McNair,Hull City,DEF,Arsenal (B),0.0,-0.286,0.03,0.027,2026-11-04T12:41:07+00:00
+10,286,Mohamed Belloumi,Hull City,MID,Arsenal (B),4.2,2.944,2.317,1.955,2026-11-04T12:41:07+00:00
+10,287,Liam Millar,Hull City,MID,Arsenal (B),0.0,-0.092,0.04,0.066,2026-11-04T12:41:07+00:00
+10,288,Kieran Dowell,Hull City,MID,Arsenal (B),0.0,-0.236,0.018,0.03,2026-11-04T12:41:07+00:00
+10,289,Matt Crooks,Hull City,MID,Arsenal (B),0.6,0.78,1.281,1.042,2026-11-04T12:41:07+00:00
+10,290,Regan Slater,Hull City,MID,Arsenal (B),1.8,1.964,1.812,1.478,2026-11-04T12:41:07+00:00
+10,291,Eliot Matazo,Hull City,MID,Arsenal (B),0.0,-0.212,0.014,0.03,2026-11-04T12:41:07+00:00
+10,292,Abdülkadir Ömür,Hull City,MID,Arsenal (B),0.0,-0.14,0.063,0.066,2026-11-04T12:41:07+00:00
+10,293,Abu Kamara,Hull City,MID,Arsenal (B),0.0,-0.092,0.04,0.066,2026-11-04T12:41:07+00:00
+10,294,Óscar Zambrano,Hull City,MID,Arsenal (B),0.0,-0.212,0.014,0.03,2026-11-04T12:41:07+00:00
+10,295,Oli McBurnie,Hull City,FWD,Arsenal (B),4.8,3.266,2.753,2.23,2026-11-04T12:41:07+00:00
+10,296,David Akintola,Hull City,MID,Arsenal (B),0.0,-0.092,0.04,0.066,2026-11-04T12:41:07+00:00
+10,297,Darko Gyabi,Hull City,MID,Arsenal (B),0.0,-0.236,0.018,0.03,2026-11-04T12:41:07+00:00
+10,298,Enis Destan,Hull City,FWD,Arsenal (B),0.0,-0.207,0.018,0.037,2026-11-04T12:41:07+00:00
+10,299,Mason Burstow,Hull City,FWD,Arsenal (B),0.0,-0.207,0.018,0.037,2026-11-04T12:41:07+00:00
+10,300,Christian Walton,Ipswich Town,GK,Bournemouth (H),2.0,2.726,2.441,2.555,2026-11-04T12:41:07+00:00
+10,301,Alex Palmer,Ipswich Town,GK,Bournemouth (H),0.0,0.113,0.006,0.049,2026-11-04T12:41:07+00:00
+10,302,David Button,Ipswich Town,GK,Bournemouth (H),0.0,0.113,0.006,0.049,2026-11-04T12:41:07+00:00
+10,303,Cédric Kipré,Ipswich Town,DEF,Bournemouth (H),0.0,0.071,0.028,0.049,2026-11-04T12:41:07+00:00
+10,304,Dara O'Shea,Ipswich Town,DEF,Bournemouth (H),3.8,3.024,2.914,2.862,2026-11-04T12:41:07+00:00
+10,305,Leif Davis,Ipswich Town,DEF,Bournemouth (H),1.2,2.69,2.367,2.409,2026-11-04T12:41:07+00:00
+10,306,Jacob Greaves,Ipswich Town,DEF,Bournemouth (H),0.2,0.572,0.8,0.703,2026-11-04T12:41:07+00:00
+10,307,Ben Johnson,Ipswich Town,DEF,Bournemouth (H),0.0,0.094,0.02,0.049,2026-11-04T12:41:07+00:00
+10,308,Darnell Furlong,Ipswich Town,DEF,Bournemouth (H),0.0,0.071,0.028,0.049,2026-11-04T12:41:07+00:00
+10,309,Marcelino Núñez,Ipswich Town,MID,Bournemouth (H),0.0,0.216,0.079,0.088,2026-11-04T12:41:07+00:00
+10,310,Azor Matusiwa,Ipswich Town,MID,Bournemouth (H),1.2,0.815,1.141,1.049,2026-11-04T12:41:07+00:00
+10,311,Wes Burns,Ipswich Town,MID,Bournemouth (H),0.0,0.264,0.047,0.088,2026-11-04T12:41:07+00:00
+10,312,Jack Taylor,Ipswich Town,MID,Bournemouth (H),0.0,0.121,0.026,0.052,2026-11-04T12:41:07+00:00
+10,313,Jack Clarke,Ipswich Town,MID,Bournemouth (H),1.8,1.702,1.72,1.738,2026-11-04T12:41:07+00:00
+10,314,Chiedozie Ogbene,Ipswich Town,MID,Bournemouth (H),0.0,0.24,0.052,0.088,2026-11-04T12:41:07+00:00
+10,315,Abdul Fatawu,Ipswich Town,MID,Bournemouth (H),1.4,1.586,1.704,2.029,2026-11-04T12:41:07+00:00
+10,316,Emersonn Correia da Silva,Ipswich Town,FWD,Bournemouth (H),1.8,2.282,2.744,2.506,2026-11-04T12:41:07+00:00
+10,317,George Hirst,Ipswich Town,FWD,Bournemouth (H),0.0,0.269,0.038,0.096,2026-11-04T12:41:07+00:00
+10,318,Jaden Philogene,Ipswich Town,MID,Bournemouth (H),1.4,1.37,1.401,1.78,2026-11-04T12:41:07+00:00
+10,319,Sam Szmodics,Ipswich Town,MID,Bournemouth (H),0.0,0.264,0.047,0.088,2026-11-04T12:41:07+00:00
+10,320,Chuba Akpom,Ipswich Town,FWD,Bournemouth (H),1.0,0.864,1.25,1.258,2026-11-04T12:41:07+00:00
+10,321,Sindre Walle Egeli,Ipswich Town,FWD,Bournemouth (H),0.2,0.287,0.553,0.627,2026-11-04T12:41:07+00:00
+10,322,Ali Al-Hamadi,Ipswich Town,FWD,Bournemouth (H),0.0,0.269,0.038,0.096,2026-11-04T12:41:07+00:00
+10,323,Kasey McAteer,Ipswich Town,MID,Bournemouth (H),0.0,0.097,0.039,0.052,2026-11-04T12:41:07+00:00
+10,324,Anis Mehmeti,Ipswich Town,MID,Bournemouth (H),0.0,0.216,0.079,0.088,2026-11-04T12:41:07+00:00
+10,325,Karl Darlow,Man Utd,GK,Aston Villa (H),0.0,0.187,0.05,0.071,2026-11-04T12:41:07+00:00
+10,326,Lucas Estella Perri,Leeds,GK,Spurs (H),0.0,0.211,0.066,0.071,2026-11-04T12:41:07+00:00
+10,327,Jaka Bijol,Leeds,DEF,Spurs (H),1.8,1.072,1.39,1.223,2026-11-04T12:41:07+00:00
+10,328,Pascal Struijk,Brighton,DEF,Brentford (H),0.6,0.917,1.282,1.446,2026-11-04T12:41:07+00:00
+10,329,Joe Rodon,Leeds,DEF,Spurs (H),0.0,0.145,0.154,0.071,2026-11-04T12:41:07+00:00
+10,330,Jayden Bogle,Leeds,DEF,Spurs (H),2.8,3.03,2.726,2.824,2026-11-04T12:41:07+00:00
+10,331,Gabriel Gudmundsson,Leeds,DEF,Spurs (H),3.8,2.833,3.046,2.693,2026-11-04T12:41:07+00:00
+10,332,James Justin,Leeds,DEF,Spurs (H),4.8,3.353,3.333,2.914,2026-11-04T12:41:07+00:00
+10,333,Sebastiaan Bornauw,Leeds,DEF,Spurs (H),0.0,0.193,0.072,0.071,2026-11-04T12:41:07+00:00
+10,334,Tarik Muharemović,Leeds,DEF,Spurs (H),5.0,3.608,2.934,2.986,2026-11-04T12:41:07+00:00
+10,335,Anton Stach,Leeds,MID,Spurs (H),2.2,2.92,2.31,2.928,2026-11-04T12:41:07+00:00
+10,336,Noah Okafor,Leeds,MID,Spurs (H),1.6,1.88,1.894,2.064,2026-11-04T12:41:07+00:00
+10,337,Brenden Aaronson,Leeds,MID,Spurs (H),1.2,1.133,1.217,1.264,2026-11-04T12:41:07+00:00
+10,338,Ethan Ampadu,Leeds,MID,Spurs (H),2.4,3.123,2.828,2.976,2026-11-04T12:41:07+00:00
+10,339,Sean Longstaff,Leeds,MID,Spurs (H),0.6,0.723,1.049,0.949,2026-11-04T12:41:07+00:00
+10,340,Joe Gelhardt,Hull City,MID,Arsenal (B),2.4,1.021,1.358,1.345,2026-11-04T12:41:07+00:00
+10,341,Wilfried Gnonto,Leeds,MID,Spurs (H),0.0,0.243,0.042,0.088,2026-11-04T12:41:07+00:00
+10,342,Jack Harrison,Leeds,MID,Spurs (H),0.0,0.243,0.042,0.088,2026-11-04T12:41:07+00:00
+10,343,Daniel James,Leeds,MID,Spurs (H),0.6,0.76,0.98,0.863,2026-11-04T12:41:07+00:00
+10,344,Ilia Gruev,Leeds,MID,Spurs (H),0.0,0.243,0.042,0.088,2026-11-04T12:41:07+00:00
+10,345,Tanaka Ao,Leeds,MID,Spurs (H),2.0,2.111,1.894,2.09,2026-11-04T12:41:07+00:00
+10,346,Dominic Calvert-Lewin,Leeds,FWD,Spurs (H),3.4,3.619,3.939,3.858,2026-11-04T12:41:07+00:00
+10,347,Lukas Nmecha,Leeds,FWD,Spurs (H),1.0,1.214,1.104,1.36,2026-11-04T12:41:07+00:00
+10,348,Joël Piroe,Leeds,FWD,Spurs (H),0.0,0.248,0.022,0.096,2026-11-04T12:41:07+00:00
+10,349,Mateo Joseph Fernández-Regatillo,Leeds,FWD,Spurs (H),0.0,0.129,0.012,0.06,2026-11-04T12:41:07+00:00
+10,350,Alisson Becker,Liverpool,GK,Crystal Palace (B),3.8,3.536,4.584,4.391,2026-11-04T12:41:07+00:00
+10,351,Giorgi Mamardashvili,Liverpool,GK,Crystal Palace (B),0.0,0.464,0.109,0.129,2026-11-04T12:41:07+00:00
+10,352,Freddie Woodman,Liverpool,GK,Crystal Palace (B),0.0,0.273,0.017,0.049,2026-11-04T12:41:07+00:00
+10,353,Armin Pecsi,Liverpool,GK,Crystal Palace (B),0.0,0.273,0.017,0.049,2026-11-04T12:41:07+00:00
+10,354,Vitezslav Jaros,Liverpool,GK,Crystal Palace (B),0.0,0.273,0.017,0.049,2026-11-04T12:41:07+00:00
+10,355,Harvey Davies,Liverpool,GK,Crystal Palace (B),0.0,0.273,0.017,0.049,2026-11-04T12:41:07+00:00
+10,356,Virgil van Dijk,Liverpool,DEF,Crystal Palace (B),4.4,3.945,4.745,4.537,2026-11-04T12:41:07+00:00
+10,357,Jeremie Frimpong,Liverpool,DEF,Crystal Palace (B),0.4,0.827,1.013,0.758,2026-11-04T12:41:07+00:00
+10,358,Milos Kerkez,Liverpool,DEF,Crystal Palace (B),3.2,3.347,3.629,3.689,2026-11-04T12:41:07+00:00
+10,359,Joe Gomez,Liverpool,DEF,Crystal Palace (B),0.4,0.653,0.941,0.681,2026-11-04T12:41:07+00:00
+10,360,Conor Bradley,Liverpool,DEF,Crystal Palace (B),0.0,0.469,0.157,0.129,2026-11-04T12:41:07+00:00
+10,361,Wellity Lucky,Liverpool,DEF,Crystal Palace (B),0.0,0.231,0.019,0.049,2026-11-04T12:41:07+00:00
+10,362,Jeremy Jacquet,Liverpool,DEF,Crystal Palace (B),4.4,3.636,4.59,4.347,2026-11-04T12:41:07+00:00
+10,363,Giovanni Leoni,Liverpool,DEF,Crystal Palace (B),0.0,0.231,0.019,0.049,2026-11-04T12:41:07+00:00
+10,364,Kostas Tsimikas,Liverpool,DEF,Crystal Palace (B),0.4,0.664,0.897,0.659,2026-11-04T12:41:07+00:00
+10,365,Calvin Ramsay,Liverpool,DEF,Crystal Palace (B),0.0,0.255,0.012,0.049,2026-11-04T12:41:07+00:00
+10,366,Florian Wirtz,Liverpool,MID,Crystal Palace (B),4.2,3.502,4.789,4.003,2026-11-04T12:41:07+00:00
+10,367,Cody Gakpo,Liverpool,MID,Crystal Palace (B),1.6,2.771,2.961,3.413,2026-11-04T12:41:07+00:00
+10,368,Dominik Szoboszlai,Liverpool,MID,Crystal Palace (B),0.8,1.676,2.269,2.33,2026-11-04T12:41:07+00:00
+10,369,Rio Ngumoha,Liverpool,MID,Crystal Palace (B),0.8,1.701,1.929,1.52,2026-11-04T12:41:07+00:00
+10,370,Federico Chiesa,Liverpool,MID,Crystal Palace (B),0.2,0.534,0.47,0.289,2026-11-04T12:41:07+00:00
+10,371,Ryan Gravenberch,Liverpool,MID,Crystal Palace (B),0.6,1.487,1.92,1.74,2026-11-04T12:41:07+00:00
+10,372,Alexis Mac Allister,Liverpool,MID,Crystal Palace (B),2.4,3.58,4.564,4.436,2026-11-04T12:41:07+00:00
+10,373,Curtis Jones,Liverpool,MID,Crystal Palace (B),0.0,0.544,0.194,0.145,2026-11-04T12:41:07+00:00
+10,374,Endo Wataru,Liverpool,MID,Crystal Palace (B),0.0,0.377,0.084,0.088,2026-11-04T12:41:07+00:00
+10,375,Trey Nyoni,Liverpool,MID,Crystal Palace (B),1.0,2.007,1.733,1.614,2026-11-04T12:41:07+00:00
+10,376,Stefan Bajčetić Maquieira,Liverpool,MID,Crystal Palace (B),0.0,0.424,0.081,0.088,2026-11-04T12:41:07+00:00
+10,377,Victor Munoz,Liverpool,MID,Crystal Palace (B),2.6,2.314,2.424,2.364,2026-11-04T12:41:07+00:00
+10,378,James McConnell,Liverpool,MID,Crystal Palace (B),0.0,0.281,0.026,0.052,2026-11-04T12:41:07+00:00
+10,379,Alexander Isak,Liverpool,FWD,Crystal Palace (B),5.6,4.09,4.523,4.65,2026-11-04T12:41:07+00:00
+10,380,Hugo Ekitiké,Liverpool,FWD,Crystal Palace (B),0.0,1.002,0.16,0.338,2026-11-04T12:41:07+00:00
+10,381,Lewis Koumas,Liverpool,MID,Crystal Palace (B),1.2,1.432,1.994,1.69,2026-11-04T12:41:07+00:00
+10,382,Jayden Danns,Liverpool,FWD,Crystal Palace (B),0.0,0.31,0.026,0.081,2026-11-04T12:41:07+00:00
+10,383,Harvey Elliott,Liverpool,MID,Crystal Palace (B),0.0,0.52,0.133,0.142,2026-11-04T12:41:07+00:00
+10,384,Gianluigi Donnarumma,Man City,GK,Nott'm Forest (B),3.0,3.304,4.124,4.35,2026-11-04T12:41:07+00:00
+10,385,James Trafford,Leeds,GK,Spurs (H),5.2,3.321,2.949,3.072,2026-11-04T12:41:07+00:00
+10,386,Marcus Bettinelli,Man City,GK,Nott'm Forest (B),0.0,0.34,0.068,0.092,2026-11-04T12:41:07+00:00
+10,387,Nico O'Reilly,Man City,DEF,Nott'm Forest (B),1.8,1.958,2.478,2.443,2026-11-04T12:41:07+00:00
+10,388,Marc Guéhi,Man City,DEF,Nott'm Forest (B),2.2,2.404,2.355,1.913,2026-11-04T12:41:07+00:00
+10,389,Matheus Nunes,Man City,DEF,Nott'm Forest (B),2.2,2.739,2.898,2.439,2026-11-04T12:41:07+00:00
+10,390,Rúben dos Santos Gato Alves Dias,Man City,DEF,Nott'm Forest (B),2.2,3.4,4.188,4.388,2026-11-04T12:41:07+00:00
+10,391,Joško Gvardiol,Man City,DEF,Nott'm Forest (B),2.2,3.152,3.071,3.055,2026-11-04T12:41:07+00:00
+10,392,Rayan Aït-Nouri,Man City,DEF,Nott'm Forest (B),0.0,0.512,0.35,0.182,2026-11-04T12:41:07+00:00
+10,393,Abdukodir Khusanov,Man City,DEF,Nott'm Forest (B),1.6,1.922,1.74,1.823,2026-11-04T12:41:07+00:00
+10,394,Max Alleyne,Man City,DEF,Nott'm Forest (B),0.0,0.465,0.195,0.129,2026-11-04T12:41:07+00:00
+10,395,Rico Lewis,Man City,DEF,Nott'm Forest (B),0.2,0.85,1.16,0.71,2026-11-04T12:41:07+00:00
+10,396,Vitor de Oliveira Nunes dos Reis,Man City,DEF,Nott'm Forest (B),0.0,0.321,0.058,0.092,2026-11-04T12:41:07+00:00
+10,397,Antoine Semenyo,Man City,MID,Nott'm Forest (B),4.2,2.887,3.496,3.116,2026-11-04T12:41:07+00:00
+10,398,Phil Foden,Man City,MID,Nott'm Forest (B),2.2,2.455,2.568,2.928,2026-11-04T12:41:07+00:00
+10,399,Rayan Cherki,Man City,MID,Nott'm Forest (B),3.8,3.208,3.799,3.057,2026-11-04T12:41:07+00:00
+10,400,Jérémy Doku,Man City,MID,Nott'm Forest (B),4.6,4.037,4.906,3.997,2026-11-04T12:41:07+00:00
+10,401,Omar Marmoush,Spurs,FWD,Leeds (B),3.2,3.078,3.29,3.346,2026-11-04T12:41:07+00:00
+10,402,Rodrigo 'Rodri' Hernandez Cascante,Man City,MID,Nott'm Forest (B),0.0,0.753,0.31,0.163,2026-11-04T12:41:07+00:00
+10,403,Sávio Moreira de Oliveira,Spurs,MID,Leeds (B),0.8,1.847,2.219,2.461,2026-11-04T12:41:07+00:00
+10,404,Tijjani Reijnders,Man City,MID,Nott'm Forest (B),0.0,0.634,0.322,0.163,2026-11-04T12:41:07+00:00
+10,405,Nico González Iglesias,Newcastle,MID,Fulham (B),3.2,2.434,2.899,2.645,2026-11-04T12:41:07+00:00
+10,406,Mateo Kovačić,Man City,MID,Nott'm Forest (B),1.0,0.668,1.304,1.432,2026-11-04T12:41:07+00:00
+10,407,Claudio Echeverri,Man City,MID,Nott'm Forest (B),0.0,0.372,0.049,0.088,2026-11-04T12:41:07+00:00
+10,408,Kalvin Phillips,Man City,MID,Nott'm Forest (B),0.0,0.396,0.062,0.088,2026-11-04T12:41:07+00:00
+10,409,Divine Mukasa,Man City,MID,Nott'm Forest (B),0.0,0.276,0.04,0.052,2026-11-04T12:41:07+00:00
+10,410,Jeremy Monga,Man City,MID,Nott'm Forest (B),0.0,0.372,0.049,0.088,2026-11-04T12:41:07+00:00
+10,411,Erling Haaland,Man City,FWD,Nott'm Forest (B),7.0,6.723,6.668,6.502,2026-11-04T12:41:07+00:00
+10,412,Senne Lammens,Man Utd,GK,Aston Villa (H),2.6,2.828,2.604,2.56,2026-11-04T12:41:07+00:00
+10,413,Altay Bayındır,Man Utd,GK,Aston Villa (H),0.0,0.187,0.05,0.071,2026-11-04T12:41:07+00:00
+10,414,Tom Heaton,Man Utd,GK,Aston Villa (H),0.0,0.068,0.036,0.049,2026-11-04T12:41:07+00:00
+10,415,Patrick Dorgu,Man Utd,MID,Aston Villa (H),0.8,0.596,0.982,0.896,2026-11-04T12:41:07+00:00
+10,416,Matthijs de Ligt,Man Utd,DEF,Aston Villa (H),0.0,0.264,0.212,0.107,2026-11-04T12:41:07+00:00
+10,417,Diogo Dalot Teixeira,Man Utd,DEF,Aston Villa (H),2.0,2.808,2.018,2.019,2026-11-04T12:41:07+00:00
+10,418,Harry Maguire,Man Utd,DEF,Aston Villa (H),1.6,2.738,2.777,2.498,2026-11-04T12:41:07+00:00
+10,419,Lisandro Martínez,Man Utd,DEF,Aston Villa (H),0.6,2.064,1.927,1.621,2026-11-04T12:41:07+00:00
+10,420,Leny Yoro,Man Utd,DEF,Aston Villa (H),1.8,2.108,2.022,1.982,2026-11-04T12:41:07+00:00
+10,421,Ayden Heaven,Man Utd,DEF,Aston Villa (H),0.4,0.598,0.725,0.758,2026-11-04T12:41:07+00:00
+10,422,Noussair Mazraoui,Man Utd,DEF,Aston Villa (H),0.6,0.661,0.806,0.787,2026-11-04T12:41:07+00:00
+10,423,Luke Shaw,Man Utd,DEF,Aston Villa (H),1.0,1.148,1.078,1.127,2026-11-04T12:41:07+00:00
+10,424,Harry Amass,Man Utd,DEF,Aston Villa (H),0.0,0.05,0.016,0.049,2026-11-04T12:41:07+00:00
+10,425,Tyler Fredricson,Man Utd,DEF,Aston Villa (H),0.0,0.05,0.016,0.049,2026-11-04T12:41:07+00:00
+10,426,Bruno Borges Fernandes,Man Utd,MID,Aston Villa (H),1.2,4.097,4.498,4.379,2026-11-04T12:41:07+00:00
+10,427,Bryan Mbeumo,Man Utd,MID,Aston Villa (H),4.2,4.241,5.326,4.931,2026-11-04T12:41:07+00:00
+10,428,Matheus Santos Carneiro da Cunha,Man Utd,MID,Aston Villa (H),4.8,3.486,3.94,3.12,2026-11-04T12:41:07+00:00
+10,429,Marcus Rashford,Man Utd,MID,Aston Villa (H),0.6,1.199,2.05,1.614,2026-11-04T12:41:07+00:00
+10,430,Mason Mount,Man Utd,MID,Aston Villa (H),1.0,1.465,1.793,1.773,2026-11-04T12:41:07+00:00
+10,431,Amad Diallo,Man Utd,MID,Aston Villa (H),1.4,1.926,2.482,2.759,2026-11-04T12:41:07+00:00
+10,432,Kobbie Mainoo,Man Utd,MID,Aston Villa (H),1.6,1.686,1.774,1.855,2026-11-04T12:41:07+00:00
+10,433,Manuel Ugarte Ribeiro,Man Utd,MID,Aston Villa (H),0.0,0.219,0.044,0.088,2026-11-04T12:41:07+00:00
+10,434,Jack Fletcher,Man Utd,MID,Aston Villa (H),0.0,0.195,0.048,0.088,2026-11-04T12:41:07+00:00
+10,435,Shea Lacey,Man Utd,MID,Aston Villa (H),0.2,0.364,0.652,0.552,2026-11-04T12:41:07+00:00
+10,436,Toby Collyer,Man Utd,MID,Aston Villa (H),0.0,0.219,0.044,0.088,2026-11-04T12:41:07+00:00
+10,437,Bendito Mantato,Man Utd,MID,Aston Villa (H),0.0,0.076,0.015,0.052,2026-11-04T12:41:07+00:00
+10,438,Tyler Fletcher,Man Utd,MID,Aston Villa (H),0.0,0.076,0.015,0.052,2026-11-04T12:41:07+00:00
+10,439,Benjamin Sesko,Man Utd,FWD,Aston Villa (H),0.0,0.678,0.099,0.171,2026-11-04T12:41:07+00:00
+10,440,Joshua Zirkzee,Man Utd,FWD,Aston Villa (H),0.6,1.254,1.314,1.335,2026-11-04T12:41:07+00:00
+10,441,Chido Obi,Man Utd,FWD,Aston Villa (H),0.0,0.105,0.011,0.06,2026-11-04T12:41:07+00:00
+10,442,Nick Pope,Newcastle,GK,Fulham (B),0.0,0.272,0.164,0.107,2026-11-04T12:41:07+00:00
+10,443,Mark Gillespie,Newcastle,GK,Fulham (B),0.0,0.177,0.032,0.071,2026-11-04T12:41:07+00:00
+10,444,Ewen Jaouen,Newcastle,GK,Fulham (B),0.0,0.153,0.043,0.071,2026-11-04T12:41:07+00:00
+10,445,Malick Thiaw,Newcastle,DEF,Fulham (B),1.2,1.902,1.597,1.645,2026-11-04T12:41:07+00:00
+10,446,Fabian Schär,Newcastle,DEF,Fulham (B),2.2,1.778,1.993,1.88,2026-11-04T12:41:07+00:00
+10,447,Sven Botman,Newcastle,DEF,Fulham (B),3.0,2.282,2.084,2.347,2026-11-04T12:41:07+00:00
+10,448,Dan Burn,Newcastle,DEF,Fulham (B),1.8,1.423,1.263,1.604,2026-11-04T12:41:07+00:00
+10,449,Lewis Hall,Newcastle,DEF,Fulham (B),4.8,3.461,3.042,3.062,2026-11-04T12:41:07+00:00
+10,450,Tino Livramento,Newcastle,DEF,Fulham (B),0.0,0.23,0.073,0.107,2026-11-04T12:41:07+00:00
+10,451,Alex Murphy,Newcastle,DEF,Fulham (B),0.0,0.039,0.018,0.049,2026-11-04T12:41:07+00:00
+10,452,Bruno Guimarães Rodriguez Moura,Arsenal,MID,Hull City (H),3.4,2.364,2.32,2.506,2026-11-04T12:41:07+00:00
+10,453,Harvey Barnes,Newcastle,MID,Fulham (B),4.6,3.68,3.716,3.644,2026-11-04T12:41:07+00:00
+10,454,Anthony Elanga,Newcastle,MID,Fulham (B),0.6,1.035,1.088,1.339,2026-11-04T12:41:07+00:00
+10,455,Sandro Tonali,Spurs,MID,Leeds (B),4.2,3.578,3.336,3.007,2026-11-04T12:41:07+00:00
+10,456,Jacob Ramsey,Newcastle,MID,Fulham (B),-0.2,0.465,0.621,0.53,2026-11-04T12:41:07+00:00
+10,457,Jacob Murphy,Newcastle,MID,Fulham (B),1.8,2.135,2.231,2.421,2026-11-04T12:41:07+00:00
+10,458,Joelinton Cássio Apolinário de Lira,Newcastle,MID,Fulham (B),1.2,1.968,1.985,1.859,2026-11-04T12:41:07+00:00
+10,459,Lewis Miley,Newcastle,MID,Fulham (B),1.4,1.626,1.871,1.683,2026-11-04T12:41:07+00:00
+10,460,Joe Willock,Newcastle,MID,Fulham (B),3.4,1.939,2.381,2.432,2026-11-04T12:41:07+00:00
+10,461,Bazoumana Touré,Newcastle,MID,Fulham (B),0.8,1.453,1.396,1.587,2026-11-04T12:41:07+00:00
+10,462,Sean Steur,Newcastle,MID,Fulham (B),1.0,0.854,1.035,1.262,2026-11-04T12:41:07+00:00
+10,463,Nick Woltemade,Newcastle,FWD,Fulham (B),0.0,0.429,0.098,0.171,2026-11-04T12:41:07+00:00
+10,464,Yoane Wissa,Newcastle,FWD,Fulham (B),1.0,2.713,2.438,2.423,2026-11-04T12:41:07+00:00
+10,465,William Osula,Newcastle,FWD,Fulham (B),2.4,2.103,2.337,2.173,2026-11-04T12:41:07+00:00
+10,466,Sean Neave,Newcastle,FWD,Fulham (B),0.0,0.095,0.012,0.06,2026-11-04T12:41:07+00:00
+10,467,Matz Sels,Nott'm Forest,GK,Man City (H),1.8,2.843,2.737,3.169,2026-11-04T12:41:07+00:00
+10,468,John Victor Maciel Furtado,Nott'm Forest,GK,Man City (H),0.0,0.019,0.143,0.071,2026-11-04T12:41:07+00:00
+10,469,Neco Williams,Nott'm Forest,DEF,Man City (H),3.0,3.36,2.876,3.217,2026-11-04T12:41:07+00:00
+10,470,Felipe Rodrigues da Silva,Nott'm Forest,DEF,Man City (H),0.0,0.144,0.111,0.107,2026-11-04T12:41:07+00:00
+10,471,Nikola Milenković,Nott'm Forest,DEF,Man City (H),0.0,1.301,1.373,1.315,2026-11-04T12:41:07+00:00
+10,472,Murillo Costa dos Santos,Nott'm Forest,DEF,Man City (H),2.4,3.347,3.529,3.55,2026-11-04T12:41:07+00:00
+10,473,Ola Aina,Nott'm Forest,DEF,Man City (H),0.2,0.353,0.671,0.9,2026-11-04T12:41:07+00:00
+10,474,Jair Paula da Cunha Filho,Nott'm Forest,DEF,Man City (H),1.2,2.181,1.993,1.983,2026-11-04T12:41:07+00:00
+10,475,Nicolò Savona,Nott'm Forest,DEF,Man City (H),0.0,0.025,0.126,0.071,2026-11-04T12:41:07+00:00
+10,476,Omar Richards,Nott'm Forest,DEF,Man City (H),0.0,-0.118,0.037,0.049,2026-11-04T12:41:07+00:00
+10,477,Zach Abbott,Nott'm Forest,DEF,Man City (H),0.0,-0.095,0.023,0.049,2026-11-04T12:41:07+00:00
+10,478,Luca Netz,Nott'm Forest,DEF,Man City (H),0.4,0.207,0.647,0.643,2026-11-04T12:41:07+00:00
+10,479,Tyler Bindon,Nott'm Forest,DEF,Man City (H),0.0,-0.095,0.023,0.049,2026-11-04T12:41:07+00:00
+10,480,Morgan Gibbs-White,Nott'm Forest,MID,Man City (H),1.6,3.495,3.39,3.291,2026-11-04T12:41:07+00:00
+10,481,Elliot Anderson,Man City,MID,Nott'm Forest (B),2.8,3.106,3.288,3.058,2026-11-04T12:41:07+00:00
+10,482,Callum Hudson-Odoi,Nott'm Forest,MID,Man City (H),0.6,0.835,1.535,1.092,2026-11-04T12:41:07+00:00
+10,483,Dan Ndoye,Nott'm Forest,MID,Man City (H),3.0,2.25,2.593,2.481,2026-11-04T12:41:07+00:00
+10,484,Omari Hutchinson,Nott'm Forest,MID,Man City (H),0.0,0.17,0.085,0.142,2026-11-04T12:41:07+00:00
+10,485,Dilane Bakwa,Nott'm Forest,MID,Man City (H),0.0,0.194,0.109,0.145,2026-11-04T12:41:07+00:00
+10,486,James McAtee,Nott'm Forest,MID,Man City (H),3.2,3.199,3.077,3.016,2026-11-04T12:41:07+00:00
+10,487,Nicolás Domínguez,Nott'm Forest,MID,Man City (H),0.6,0.418,0.759,0.779,2026-11-04T12:41:07+00:00
+10,488,Ibrahim Sangaré,Nott'm Forest,MID,Man City (H),0.6,0.603,0.843,0.803,2026-11-04T12:41:07+00:00
+10,489,Ryan Yates,Nott'm Forest,MID,Man City (H),0.2,0.502,0.711,0.736,2026-11-04T12:41:07+00:00
+10,490,Chris Wood,Nott'm Forest,FWD,Man City (H),1.0,1.196,1.596,1.332,2026-11-04T12:41:07+00:00
+10,491,Igor Jesus Maciel da Cruz,Nott'm Forest,FWD,Man City (H),0.2,0.636,0.899,0.926,2026-11-04T12:41:07+00:00
+10,492,Taiwo Awoniyi,Coventry City,FWD,Everton (B),2.2,1.518,1.532,1.763,2026-11-04T12:41:07+00:00
+10,493,Arnaud Kalimuendo,Nott'm Forest,FWD,Man City (H),0.6,0.774,1.026,0.933,2026-11-04T12:41:07+00:00
+10,494,Guglielmo Vicario,Spurs,GK,Leeds (B),0.0,0.215,0.068,0.071,2026-11-04T12:41:07+00:00
+10,495,Brandon Austin,Spurs,GK,Leeds (B),0.0,0.096,0.021,0.049,2026-11-04T12:41:07+00:00
+10,496,Antonín Kinský,Spurs,GK,Leeds (B),4.4,3.215,2.989,2.433,2026-11-04T12:41:07+00:00
+10,497,Martin Dubravka,Spurs,GK,Leeds (B),0.0,0.096,0.021,0.049,2026-11-04T12:41:07+00:00
+10,498,Marcos Senesi Barón,Spurs,DEF,Leeds (B),0.4,1.03,1.449,0.908,2026-11-04T12:41:07+00:00
+10,499,Pedro Porro Sauceda,Spurs,DEF,Leeds (B),0.6,1.027,1.499,1.349,2026-11-04T12:41:07+00:00
+10,500,Cristian Romero,Spurs,DEF,Leeds (B),0.0,0.316,0.285,0.107,2026-11-04T12:41:07+00:00
+10,501,Kevin Danso,Sunderland,DEF,Chelsea (H),-0.4,0.889,1.448,1.203,2026-11-04T12:41:07+00:00
+10,502,Andrew Robertson,Spurs,DEF,Leeds (B),4.6,2.543,2.722,1.892,2026-11-04T12:41:07+00:00
+10,503,Micky van de Ven,Spurs,DEF,Leeds (B),3.0,2.875,2.958,2.458,2026-11-04T12:41:07+00:00
+10,504,Luka Vušković,Brighton,DEF,Brentford (H),6.8,3.792,3.237,3.501,2026-11-04T12:41:07+00:00
+10,505,Djed Spence,Spurs,DEF,Leeds (B),0.0,0.197,0.135,0.071,2026-11-04T12:41:07+00:00
+10,506,Destiny Udogie,Spurs,DEF,Leeds (B),0.6,0.753,0.907,0.694,2026-11-04T12:41:07+00:00
+10,507,Ashley Phillips,Spurs,DEF,Leeds (B),0.0,0.197,0.135,0.071,2026-11-04T12:41:07+00:00
+10,508,Ben Davies,Spurs,DEF,Leeds (B),1.6,0.531,0.755,0.773,2026-11-04T12:41:07+00:00
+10,509,Jun'ai Byfield,Spurs,DEF,Leeds (B),0.0,0.078,0.03,0.049,2026-11-04T12:41:07+00:00
+10,510,James Rowswell,Spurs,DEF,Leeds (B),0.0,0.078,0.03,0.049,2026-11-04T12:41:07+00:00
+10,511,João Victor de Souza Menezes,Spurs,DEF,Leeds (B),0.0,0.078,0.03,0.049,2026-11-04T12:41:07+00:00
+10,512,Mohammed Kudus,Spurs,MID,Leeds (B),4.6,3.792,3.572,3.612,2026-11-04T12:41:07+00:00
+10,513,Xavi Simons,Spurs,MID,Leeds (B),0.0,0.462,0.104,0.163,2026-11-04T12:41:07+00:00
+10,514,Mathys Tel,Spurs,MID,Leeds (B),3.0,1.95,2.211,2.094,2026-11-04T12:41:07+00:00
+10,515,James Maddison,Spurs,MID,Leeds (B),2.4,1.573,1.84,1.832,2026-11-04T12:41:07+00:00
+10,516,Rodrigo Bentancur,Spurs,MID,Leeds (B),0.4,0.937,1.517,1.124,2026-11-04T12:41:07+00:00
+10,517,Wilson Odobert,Spurs,MID,Leeds (B),0.0,0.367,0.111,0.145,2026-11-04T12:41:07+00:00
+10,518,Pape Matar Sarr,Spurs,MID,Leeds (B),0.0,0.223,0.048,0.088,2026-11-04T12:41:07+00:00
+10,519,Conor Gallagher,Spurs,MID,Leeds (B),2.2,2.203,1.74,1.93,2026-11-04T12:41:07+00:00
+10,520,Lucas Bergvall,Spurs,MID,Leeds (B),0.8,0.767,1.253,1.121,2026-11-04T12:41:07+00:00
+10,521,Dejan Kulusevski,Spurs,MID,Leeds (B),0.6,0.858,1.086,0.942,2026-11-04T12:41:07+00:00
+10,522,Archie Gray,Spurs,MID,Leeds (B),3.0,2.918,2.863,2.5,2026-11-04T12:41:07+00:00
+10,523,Mikey Moore,Spurs,MID,Leeds (B),0.0,0.247,0.068,0.088,2026-11-04T12:41:07+00:00
+10,524,Callum Olusesi,Spurs,MID,Leeds (B),0.0,0.104,0.016,0.052,2026-11-04T12:41:07+00:00
+10,525,Mateus Fernandes,Spurs,MID,Leeds (B),2.6,2.234,2.176,2.315,2026-11-04T12:41:07+00:00
+10,526,Dominic Solanke-Mitchell,Spurs,FWD,Leeds (B),3.2,2.926,3.424,3.325,2026-11-04T12:41:07+00:00
+10,527,Richarlison de Andrade,Spurs,FWD,Leeds (B),0.0,0.467,0.105,0.171,2026-11-04T12:41:07+00:00
+10,528,Dane Scarlett,Spurs,FWD,Leeds (B),0.0,0.133,0.016,0.06,2026-11-04T12:41:07+00:00
+10,529,Robin Roefs,Sunderland,GK,Chelsea (H),2.6,2.796,2.584,2.145,2026-11-04T12:41:07+00:00
+10,530,Anthony Patterson,Sunderland,GK,Chelsea (H),0.0,-0.068,0.005,0.049,2026-11-04T12:41:07+00:00
+10,531,Melker Ellborg,Sunderland,GK,Chelsea (H),0.0,0.027,0.072,0.071,2026-11-04T12:41:07+00:00
+10,532,Daniel Ballard,Sunderland,DEF,Chelsea (H),0.4,0.683,1.172,0.875,2026-11-04T12:41:07+00:00
+10,533,Nordi Mukiele,Sunderland,DEF,Chelsea (H),1.4,1.967,1.79,1.839,2026-11-04T12:41:07+00:00
+10,534,Trai Hume,Sunderland,DEF,Chelsea (H),2.4,2.168,1.171,1.443,2026-11-04T12:41:07+00:00
+10,535,Omar Alderete,Sunderland,DEF,Chelsea (H),0.0,1.198,1.11,1.214,2026-11-04T12:41:07+00:00
+10,536,Reinildo Mandava,Sunderland,DEF,Chelsea (H),1.8,1.945,1.543,1.476,2026-11-04T12:41:07+00:00
+10,537,Jenson Seelt,Sunderland,DEF,Chelsea (H),0.0,0.033,0.069,0.071,2026-11-04T12:41:07+00:00
+10,538,Leo Fuhr Hjelde,Sunderland,DEF,Chelsea (H),0.0,-0.086,0.021,0.049,2026-11-04T12:41:07+00:00
+10,539,Luke O'Nien,Sunderland,DEF,Chelsea (H),2.8,1.685,1.913,1.516,2026-11-04T12:41:07+00:00
+10,540,Arthur Masuaku,Sunderland,DEF,Chelsea (H),0.0,-0.086,0.021,0.049,2026-11-04T12:41:07+00:00
+10,541,Thomas Meunier,Sunderland,DEF,Chelsea (H),1.0,0.756,1.214,1.246,2026-11-04T12:41:07+00:00
+10,542,Enzo Le Fée,Sunderland,MID,Chelsea (H),4.4,3.349,2.858,3.074,2026-11-04T12:41:07+00:00
+10,543,Habib Diarra,Sunderland,MID,Chelsea (H),0.4,0.616,0.755,0.899,2026-11-04T12:41:07+00:00
+10,544,Granit Xhaka,Sunderland,MID,Chelsea (H),2.6,3.017,2.959,2.825,2026-11-04T12:41:07+00:00
+10,545,Noah Sadiki,Sunderland,MID,Chelsea (H),2.4,2.198,2.163,2.295,2026-11-04T12:41:07+00:00
+10,546,Simon Adingra,Sunderland,MID,Chelsea (H),0.0,0.059,0.044,0.088,2026-11-04T12:41:07+00:00
+10,547,Romaine Mundle,Sunderland,MID,Chelsea (H),0.0,0.035,0.052,0.088,2026-11-04T12:41:07+00:00
+10,548,Chris Rigg,Sunderland,MID,Chelsea (H),1.0,0.928,1.193,1.401,2026-11-04T12:41:07+00:00
+10,549,Chemsdine Talbi,Sunderland,MID,Chelsea (H),0.4,0.696,0.739,0.963,2026-11-04T12:41:07+00:00
+10,550,Djiamgone Jocelin Ta Bi,Sunderland,MID,Chelsea (H),0.2,0.265,0.534,0.559,2026-11-04T12:41:07+00:00
+10,551,Nilson Angulo,Sunderland,MID,Chelsea (H),2.0,1.444,1.796,1.642,2026-11-04T12:41:07+00:00
+10,552,Brian Brobbey,Sunderland,FWD,Chelsea (H),4.2,2.407,2.389,2.516,2026-11-04T12:41:07+00:00
+10,553,Wilson Isidor,Sunderland,FWD,Chelsea (H),0.8,1.358,1.298,1.41,2026-11-04T12:41:07+00:00
+10,554,Kayne van Oevelen,Ipswich Town,GK,Bournemouth (H),0.0,0.232,0.068,0.071,2026-11-04T12:41:07+00:00
+10,555,Remi Matthews,Crystal Palace,GK,Liverpool (H),0.0,-0.085,0.007,0.049,2026-11-04T12:41:07+00:00
+10,556,Matt Targett,Hull City,DEF,Arsenal (B),0.0,-0.286,0.03,0.027,2026-11-04T12:41:07+00:00
+10,557,Christos Tzolis,Arsenal,MID,Hull City (H),1.0,1.632,2.177,1.767,2026-11-04T12:41:07+00:00
+10,558,Xaver Schlager,Nott'm Forest,MID,Man City (H),2.6,2.207,2.022,2.057,2026-11-04T12:41:07+00:00
+10,559,Aladji Bamba,Newcastle,MID,Fulham (B),0.2,0.216,0.439,0.401,2026-11-04T12:41:07+00:00
+10,560,Mike Penders,Chelsea,GK,Sunderland (B),1.4,1.477,1.494,1.201,2026-11-04T12:41:07+00:00
+10,561,Aaron Anselmino,Chelsea,DEF,Sunderland (B),0.0,0.192,0.068,0.072,2026-11-04T12:41:07+00:00
+10,562,Daizen Maeda,Ipswich Town,MID,Bournemouth (H),2.4,1.878,2.35,2.04,2026-11-04T12:41:07+00:00
+10,563,Hidemasa Morita,Hull City,MID,Arsenal (B),0.8,0.634,0.981,0.958,2026-11-04T12:41:07+00:00
+10,564,Kjell Scherpen,Ipswich Town,GK,Bournemouth (H),0.0,0.208,0.083,0.071,2026-11-04T12:41:07+00:00
+10,565,Mamadou Sangaré,Brentford,MID,Brighton (B),1.8,2.178,2.162,1.658,2026-11-04T12:41:07+00:00
+10,566,António João Pereira de Albuquerque Tavares da Silva,Bournemouth,DEF,Ipswich Town (B),5.4,3.816,3.944,4.071,2026-11-04T12:41:07+00:00
+10,567,Lukás Hornícek,Newcastle,GK,Fulham (B),3.2,2.993,3.15,2.898,2026-11-04T12:41:07+00:00
+10,568,Valentín Barco,Chelsea,MID,Sunderland (B),0.6,0.882,1.412,1.143,2026-11-04T12:41:07+00:00
+10,569,Gonzalo García,Fulham,FWD,Newcastle (H),2.0,3.442,3.257,3.153,2026-11-04T12:41:07+00:00
+10,570,César Palacios,Fulham,MID,Newcastle (H),0.8,0.941,1.183,1.128,2026-11-04T12:41:07+00:00
+10,571,Florentino Ibrain Morris Luís,Ipswich Town,MID,Bournemouth (H),3.4,1.884,2.302,2.16,2026-11-04T12:41:07+00:00
+10,572,Konstantinos Tzolakis,Hull City,GK,Arsenal (B),3.0,2.607,2.139,2.015,2026-11-04T12:41:07+00:00
+10,573,Juanlu Sánchez,Bournemouth,DEF,Ipswich Town (B),0.2,0.532,0.848,0.584,2026-11-04T12:41:07+00:00
+10,574,Jens Hjertø-Dahl,Hull City,MID,Arsenal (B),0.0,-0.14,0.063,0.066,2026-11-04T12:41:07+00:00
+10,575,Caleb Yirenkyi,Coventry City,MID,Everton (B),2.4,2.21,2.236,2.278,2026-11-04T12:41:07+00:00
+10,576,Elliot Stroud,Hull City,MID,Arsenal (B),1.6,1.023,1.295,1.26,2026-11-04T12:41:07+00:00
+10,577,Takehiro Tomiyasu,Crystal Palace,DEF,Liverpool (H),0.2,0.01,0.601,0.69,2026-11-04T12:41:07+00:00
+10,578,Mykhailo Mudryk,Spurs,MID,Leeds (B),0.0,0.319,0.159,0.142,2026-11-04T12:41:07+00:00
+10,579,Ronald Araujo,Liverpool,DEF,Crystal Palace (B),4.4,2.936,3.394,3.389,2026-11-04T12:41:07+00:00
+10,580,Shea Charles,Fulham,MID,Newcastle (H),2.8,3.039,2.83,2.965,2026-11-04T12:41:07+00:00
+10,581,Ousmane Diomande,Nott'm Forest,DEF,Man City (H),1.0,1.626,1.447,1.633,2026-11-04T12:41:07+00:00
+10,582,Brian Madjo,Aston Villa,FWD,Man Utd (B),0.0,0.393,0.743,0.506,2026-11-04T12:41:07+00:00
+10,583,Pep Chavarría,Chelsea,DEF,Sunderland (B),1.4,1.67,1.576,1.713,2026-11-04T12:41:07+00:00
+10,584,Gustavo Hamer,Coventry City,MID,Everton (B),0.4,0.577,1.126,0.767,2026-11-04T12:41:07+00:00
+10,585,Lucas Herrington,Hull City,DEF,Arsenal (B),1.0,0.873,1.223,1.15,2026-11-04T12:41:07+00:00
+10,586,Nobel Mendy,Hull City,DEF,Arsenal (B),1.2,0.978,1.557,1.086,2026-11-04T12:41:07+00:00
+10,587,Gerónimo Rulli,Man City,GK,Nott'm Forest (B),0.0,0.459,0.109,0.129,2026-11-04T12:41:07+00:00
+10,588,Anan Khalaili,Crystal Palace,DEF,Liverpool (H),1.8,2.72,2.154,1.948,2026-11-04T12:41:07+00:00
+10,589,Lucas Gourna-Douath,Hull City,MID,Arsenal (B),0.2,0.046,0.648,0.538,2026-11-04T12:41:07+00:00
+10,590,Steven Benda,Nott'm Forest,GK,Man City (H),0.0,0.043,0.12,0.071,2026-11-04T12:41:07+00:00
+10,591,Julio Enciso,Ipswich Town,MID,Bournemouth (H),4.8,3.299,3.341,3.869,2026-11-04T12:41:07+00:00
+10,592,Abdoul Ouattara,Ipswich Town,DEF,Bournemouth (H),4.2,3.064,3.008,3.418,2026-11-04T12:41:07+00:00
+10,593,Amar Dedic,Newcastle,DEF,Fulham (B),2.6,1.818,1.65,1.904,2026-11-04T12:41:07+00:00
+10,594,Promise David,Brighton,FWD,Brentford (H),0.0,0.451,0.123,0.171,2026-11-04T12:41:07+00:00
+10,595,Zavier Gozo,Crystal Palace,MID,Liverpool (H),0.0,0.042,0.05,0.088,2026-11-04T12:41:07+00:00
+10,596,Matteo Ruggeri,Aston Villa,DEF,Man Utd (B),0.8,0.765,1.561,1.307,2026-11-04T12:41:07+00:00
+10,597,Zion Suzuki,Aston Villa,GK,Man Utd (B),3.4,2.962,3.034,3.127,2026-11-04T12:41:07+00:00
+10,598,Nico Elvedi,Leeds,DEF,Spurs (H),2.2,2.383,1.744,1.944,2026-11-04T12:41:07+00:00
+10,599,Sidiki Cherif,Coventry City,FWD,Everton (B),3.2,1.609,2.068,2.162,2026-11-04T12:41:07+00:00
+10,600,Ibrahim Osman,Brighton,MID,Brentford (H),0.0,0.207,0.046,0.088,2026-11-04T12:41:07+00:00
+10,601,Luca Williams-Barnett,Spurs,MID,Leeds (B),0.2,0.257,0.43,0.319,2026-11-04T12:41:07+00:00
+10,602,Cameron Humphreys,Ipswich Town,MID,Bournemouth (H),0.0,0.145,0.019,0.052,2026-11-04T12:41:07+00:00
+10,603,Jayden Lienou,Leeds,DEF,Spurs (H),0.0,0.073,0.016,0.049,2026-11-04T12:41:07+00:00
+10,604,Alfie Cresswell,Leeds,MID,Spurs (H),0.0,0.124,0.013,0.052,2026-11-04T12:41:07+00:00
+10,605,Malick Yalcouyé,Brighton,MID,Brentford (H),1.0,1.282,1.317,1.244,2026-11-04T12:41:07+00:00
+10,606,Triston Rowe,Aston Villa,DEF,Man Utd (B),0.0,0.052,0.009,0.049,2026-11-04T12:41:07+00:00
+10,607,Luka Lynch,Aston Villa,MID,Man Utd (B),0.0,0.102,0.016,0.052,2026-11-04T12:41:07+00:00
+10,608,Daniel Jebbison,Bournemouth,FWD,Ipswich Town (B),0.2,0.573,0.66,0.616,2026-11-04T12:41:07+00:00
+10,609,Leo Shahar,Newcastle,DEF,Fulham (B),0.0,0.039,0.018,0.049,2026-11-04T12:41:07+00:00
+10,610,Luc De Fougerolles,Fulham,DEF,Newcastle (H),0.0,0.071,0.05,0.049,2026-11-04T12:41:07+00:00
+10,611,Aaron Wan-Bissaka,Aston Villa,DEF,Man Utd (B),1.6,1.219,1.219,1.167,2026-11-04T12:41:07+00:00
+10,612,Dayann Méthalie,Sunderland,DEF,Chelsea (H),0.0,0.686,0.934,0.871,2026-11-04T12:41:07+00:00
+10,613,Jules Ahoka,Sunderland,MID,Chelsea (H),0.2,0.22,0.374,0.522,2026-11-04T12:41:07+00:00
+10,614,Jaouen Hadjam,Brighton,DEF,Brentford (H),1.8,0.834,1.267,1.313,2026-11-04T12:41:07+00:00
+10,615,Michele Di Gregorio,Bournemouth,GK,Ipswich Town (B),0.0,0.351,0.067,0.092,2026-11-04T12:41:07+00:00
+10,616,Ayyoub Bouaddi,Man City,MID,Nott'm Forest (B),0.6,1.22,1.581,1.497,2026-11-04T12:41:07+00:00
+10,617,Mohamed-Ali Cho,Hull City,MID,Arsenal (B),1.6,1.261,1.569,1.477,2026-11-04T12:41:07+00:00
+10,618,Leon Goretzka,Aston Villa,MID,Man Utd (B),0.8,1.021,1.503,1.368,2026-11-04T12:41:07+00:00
+10,619,Exequiel Palacios,Ipswich Town,MID,Bournemouth (H),2.8,2.594,2.428,2.272,2026-11-04T12:41:07+00:00
+10,620,El Hadji Malick Diouf,Brentford,DEF,Brighton (B),0.8,0.991,1.141,1.291,2026-11-04T12:41:07+00:00
+10,621,Ryan McAidoo,Man City,MID,Nott'm Forest (B),0.0,0.503,1.005,0.574,2026-11-04T12:41:07+00:00
+10,622,Kaden Braithwaite,Man City,DEF,Nott'm Forest (B),0.0,0.202,0.042,0.049,2026-11-04T12:41:07+00:00
+10,623,Dan Bentley,Coventry City,GK,Everton (B),0.0,0.083,0.009,0.049,2026-11-04T12:41:07+00:00
+10,624,Amario Cozier-Duberry,Brighton,MID,Brentford (H),0.0,0.231,0.043,0.088,2026-11-04T12:41:07+00:00
+10,625,Alex Cairns,Leeds,GK,Spurs (H),0.0,0.092,0.006,0.049,2026-11-04T12:41:07+00:00
+10,626,Macaulay Zepa,Fulham,MID,Newcastle (H),0.0,0.098,0.016,0.052,2026-11-04T12:41:07+00:00
+10,627,Bradley Barcola,Liverpool,MID,Crystal Palace (B),3.2,4.053,3.757,3.828,2026-11-04T12:41:07+00:00
+10,628,Allan Andrade Elias,Man City,MID,Nott'm Forest (B),0.4,0.924,1.385,0.887,2026-11-04T12:41:07+00:00
+10,629,Michael Zetterer,Leeds,GK,Spurs (H),0.0,0.092,0.006,0.049,2026-11-04T12:41:07+00:00
+10,630,Taylor Harwood-Bellis,Aston Villa,DEF,Man Utd (B),0.0,0.171,0.061,0.071,2026-11-04T12:41:07+00:00
+10,631,Ibrahim Mbaye,Aston Villa,MID,Man Utd (B),1.6,1.876,1.756,1.834,2026-11-04T12:41:07+00:00
+10,632,Ilyas Ansah,Hull City,FWD,Arsenal (B),0.0,-0.111,0.023,0.074,2026-11-04T12:41:07+00:00
+10,633,Honest Ahanor,Crystal Palace,DEF,Liverpool (H),0.0,0.28,0.63,0.655,2026-11-04T12:41:07+00:00
+10,634,Matias Fernandez-Pardo,Newcastle,FWD,Fulham (B),1.0,1.629,1.755,2.005,2026-11-04T12:41:07+00:00
+10,635,Hugo Larsson,Fulham,MID,Newcastle (H),1.2,0.77,0.994,1.078,2026-11-04T12:41:07+00:00
+10,636,Manuel Ángel Morán Ibáñez,Fulham,MID,Newcastle (H),0.0,0.44,0.438,0.466,2026-11-04T12:41:07+00:00
+10,637,Robinio Vaz,Hull City,FWD,Arsenal (B),0.8,0.445,0.846,0.936,2026-11-04T12:41:07+00:00
+10,638,Brooke Norton-Cuffy,Hull City,DEF,Arsenal (B),0.8,0.495,1.054,0.933,2026-11-04T12:41:07+00:00
+10,639,José María Andrés Baixauli,Brighton,MID,Brentford (H),3.2,2.491,2.731,3.204,2026-11-04T12:41:07+00:00
+10,640,Zian Flemming,Ipswich Town,FWD,Bournemouth (H),1.6,1.633,1.611,1.691,2026-11-04T12:41:07+00:00
+10,641,Melvin Bard,Leeds,DEF,Spurs (H),0.0,0.193,0.072,0.071,2026-11-04T12:41:07+00:00
+10,642,Sorba Thomas,Hull City,MID,Arsenal (B),2.2,1.359,1.714,1.497,2026-11-04T12:41:07+00:00
+10,643,Ben Chilwell,Crystal Palace,DEF,Liverpool (H),0.0,-0.008,0.076,0.071,2026-11-04T12:41:07+00:00
+10,644,Quinten Timber,Crystal Palace,MID,Liverpool (H),2.2,1.314,1.584,1.643,2026-11-04T12:41:07+00:00
+10,645,Christos Mouzakitis,Hull City,MID,Arsenal (B),0.0,-0.092,0.04,0.066,2026-11-04T12:41:07+00:00
+10,646,Malick Fofana,Sunderland,MID,Chelsea (H),0.6,1.347,1.388,1.382,2026-11-04T12:41:07+00:00
+10,647,Darío Osorio,Crystal Palace,MID,Liverpool (H),0.4,0.67,1.358,1.0,2026-11-04T12:41:07+00:00
+10,648,Jean-Mattéo Bahoya,Leeds,MID,Spurs (H),0.6,0.399,0.577,0.627,2026-11-04T12:41:07+00:00
+10,649,Ainsley Maitland-Niles,Everton,DEF,Coventry City (H),2.6,1.79,1.885,1.825,2026-11-04T12:41:07+00:00
+10,650,David Affengruber,Fulham,DEF,Newcastle (H),4.4,3.268,3.295,3.297,2026-11-04T12:41:07+00:00
+10,651,Juan Angulo,Sunderland,FWD,Chelsea (H),0.2,0.087,0.432,0.434,2026-11-04T12:41:07+00:00
+10,652,Femi Azeez,Brighton,MID,Brentford (H),0.0,0.35,0.13,0.145,2026-11-04T12:41:07+00:00
+10,653,Floyd Samba,Man City,MID,Nott'm Forest (B),0.0,0.252,0.031,0.052,2026-11-04T12:41:07+00:00
+10,654,Braiden Graham,Everton,MID,Coventry City (H),0.0,0.268,0.017,0.052,2026-11-04T12:41:07+00:00
+10,655,Yann Gboho,Coventry City,MID,Everton (B),0.4,0.658,1.03,1.077,2026-11-04T12:41:07+00:00
+10,656,Stephen Mfuni,Coventry City,DEF,Everton (B),3.6,2.02,2.578,2.79,2026-11-04T12:41:07+00:00
+10,657,Gustavo Nunes Fernandes Gomes,Brentford,MID,Brighton (B),0.0,-0.025,0.016,0.052,2026-11-04T12:41:07+00:00
+10,658,Younes Ibrahim,Brighton,MID,Brentford (H),0.0,0.112,0.013,0.052,2026-11-04T12:41:07+00:00
+10,659,Mason Miley,Newcastle,MID,Fulham (B),0.0,0.089,0.012,0.052,2026-11-04T12:41:07+00:00
+10,660,Benjamin Fredrick,Brentford,DEF,Brighton (B),0.0,-0.075,0.033,0.049,2026-11-04T12:41:07+00:00
+10,661,Ellery Balcombe,Brentford,GK,Brighton (B),0.0,-0.057,0.037,0.049,2026-11-04T12:41:07+00:00
+10,662,Mahdi Nicoll-Jazuli,Chelsea,MID,Sunderland (B),0.2,0.159,0.264,0.354,2026-11-04T12:41:07+00:00
+10,663,Miodrag Pivas,Newcastle,DEF,Fulham (B),0.0,0.039,0.018,0.049,2026-11-04T12:41:07+00:00
+10,664,Vakhtang Salia,Newcastle,FWD,Fulham (B),0.0,0.095,0.012,0.06,2026-11-04T12:41:07+00:00
+10,665,Michael Mills,Newcastle,MID,Fulham (B),0.0,0.089,0.012,0.052,2026-11-04T12:41:07+00:00
+10,666,Kyran Thompson,Newcastle,MID,Fulham (B),0.0,0.089,0.012,0.052,2026-11-04T12:41:07+00:00
+10,667,James Wright,Aston Villa,GK,Man Utd (B),0.0,0.07,0.018,0.049,2026-11-04T12:41:07+00:00
+10,668,Tymur Tutierov,Sunderland,MID,Chelsea (H),0.667,0.715,1.12,1.23,2026-11-04T12:41:07+00:00
+10,669,Teddy Sharman-Lowe,Chelsea,GK,Sunderland (B),0.0,0.091,0.02,0.049,2026-11-04T12:41:07+00:00
+10,670,Olutayo Subuloye,Chelsea,DEF,Sunderland (B),0.0,0.073,0.011,0.049,2026-11-04T12:41:07+00:00
